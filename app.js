@@ -31,7 +31,7 @@ function calculateInvestment({
     let age = currentAge;
     
     if (typeof age !== "number" || age > 150 || age < 0 || isNaN(age)) {
-        alert("Humans don't have that kind of age");
+        console.log("Humans don't have that kind of age");
       }
     
       if (
@@ -40,7 +40,7 @@ function calculateInvestment({
         retirementAge < 0 ||
         isNaN(retirementAge)
       ) {
-        alert("Humans don't retire in that kind of age");
+        console.log("Humans don't retire in that kind of age");
       }
     // Phase 1: Pre-retirement (contributions + annual interest growth)
     while (age < retirementAge) {

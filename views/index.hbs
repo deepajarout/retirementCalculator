@@ -1,35 +1,61 @@
-<div class="container">
-    <div class="form-container">
-        <form action="/" method="POST">
-            <label for="initialAmount">Initial Savings:</label>
-            <input type="number" id="initialAmount" name="initialAmount" required step="0.01">
+    <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#calculator">Calculator</a>
+        {{!-- <a href="#learning">Learn</a> --}}
+        <a href="#feedback">Feedback</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="home" class="section bg-white shadow-lg">
+        <h2 class="text-3xl font-bold text-blue-600">Plan Your Future Today</h2>
+        <p class="text-gray-600 mt-3 max-w-xl mx-auto">Use our financial calculator to gain insights into savings, investments, and retirement planning. Make informed decisions for a secure future.</p>
+    </section>
 
-            <label for="monthlyContribution">Monthly Contribution:</label>
-            <input type="number" id="monthlyContribution" name="monthlyContribution" required step="0.01">
-            
-            <label for="percentageIncreaseMonthlyContribution">Percentage % Increase In Monthly Contribution :</label>
-            <input type="number" id="percentageIncreaseMonthlyContribution" name="percentageIncreaseMonthlyContribution" required step="0.01" value="0">
+  
+      <section class="section bg-gray-100">
+        <h2 class="text-3xl font-bold text-blue-600">Why Plan for Future?</h2>
+        <p class="text-gray-600 mt-3 max-w-xl mx-auto">Future planning is essential to ensure financial security when you stop working. 
+            By investing early and consistently, you can build wealth and enjoy a stress-free Future</p>
+    </section>
+    
+    <section id="learning" class="section bg-white shadow-lg">
+        <h2 class="text-3xl font-bold text-blue-600">How It Works</h2>
+        <p class="text-gray-600 mt-3 max-w-xl mx-auto">Enter your financial details, and our tool will forecast your future savings and investment growth. Empower yourself with better financial planning today.</p>
+    </section>
+    
+    <div class="container" id="calculator">
+        <div class="form-container">
+            <h2 class="text-xl font-bold text-blue-600">Enter Your Details</h2>
+            <form action="/" method="POST">
+                <label for="initialAmount">Initial Savings:</label>
+                <input type="number" id="initialAmount" name="initialAmount" required step="0.01">
+    
+                <label for="monthlyContribution">Monthly Contribution:</label>
+                <input type="number" id="monthlyContribution" name="monthlyContribution" required step="0.01">
+                
+                <label for="percentageIncreaseMonthlyContribution">Percentage % Increase In Monthly Contribution :</label>
+                <input type="number" id="percentageIncreaseMonthlyContribution" name="percentageIncreaseMonthlyContribution" required step="0.01" value="0">
+    
+                <label for="interestRate">Interest Rate (%):</label>
+                <input type="number" id="interestRate" name="interestRate" required step="0.01">
+    
+                <label for="inflationRate">Inflation Rate (%):</label>
+                <input type="number" id="inflationRate" name="inflationRate" required step="0.01">
+    
+                <label for="currentAge">Current Age:</label>
+                <input type="number" id="currentAge" name="currentAge" required>
+    
+                <label for="retirementAge">Retirement Age:</label>
+                <input type="number" id="retirementAge" name="retirementAge" required>
+    
+                <label for="monthlyWithdrawal">Monthly Withdrawal After Retirement:</label>
+                <input type="number" id="monthlyWithdrawal" name="monthlyWithdrawal" required step="0.01">
+                
+                <button type="submit" class="w-full mt-4">Calculate</button>
+            </form>
+        </div>
 
-            <label for="interestRate">Interest Rate (%):</label>
-            <input type="number" id="interestRate" name="interestRate" required step="0.01">
 
-            <label for="inflationRate">Inflation Rate (%):</label>
-            <input type="number" id="inflationRate" name="inflationRate" required step="0.01">
-
-            <label for="currentAge">Current Age:</label>
-            <input type="number" id="currentAge" name="currentAge" required>
-
-            <label for="retirementAge">Retirement Age:</label>
-            <input type="number" id="retirementAge" name="retirementAge" required>
-
-            <label for="monthlyWithdrawal">Monthly Withdrawal After Retirement:</label>
-            <input type="number" id="monthlyWithdrawal" name="monthlyWithdrawal" required step="0.01">
-            
-            <button type="submit">Calculate</button>
-        </form>
-    </div>
-
-    <div class="results-container">
+    {{!-- <div class="results-container">
         {{#if results}}
         <h2>Results</h2>
         <div>
@@ -57,8 +83,50 @@
             </tbody>
         </table>
         {{/if}}
+    </div> --}}
+           {{#if results}}
+        <div class="results-container">
+               
+            <h2 class="text-xl font-bold text-blue-600">Results</h2>
+            <canvas id="retirementChart"></canvas>
+            <table class="w-full mt-4 border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border border-gray-300 p-2">Age</th>
+                        <th class="border border-gray-300 p-2">Total Invested</th>
+                        <th class="border border-gray-300 p-2">Total Savings</th>
+                        <th class="border border-gray-300 p-2">Withdrawals</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsTableBody">
+                        {{#each results}}
+                <tr>
+                    <td>{{this.age}}</td>
+                    <td>${{this.totalInvested}}</td>
+                    <td>${{this.totalSavings}}</td>
+                    <td>${{this.withdrawal}}</td>
+                </tr>
+                {{/each}}
+                </tbody>
+            </table>
+             
+        </div>
+             {{/if}}
     </div>
-</div>
+    
+    <section id="feedback" class="section bg-white shadow-lg">
+        <h2 class="text-2xl font-bold text-blue-600">Feedback</h2>
+        <p class="text-gray-600 mt-3 max-w-xl mx-auto">We value your feedback! Let us know how we can improve your experience.</p>
+        <textarea placeholder="Your feedback..." rows="4"></textarea>
+        <button class="mt-4">Submit Feedback</button>
+    </section>
+    
+    <section id="contact" class="section bg-gray-100">
+        <h2 class="text-2xl font-bold text-blue-600">Get in Touch</h2>
+        <p class="text-gray-600 mt-3 max-w-xl mx-auto">Have questions? Contact us at <a href="mailto:support@financialcalc.com" class="text-blue-500">support@financialcalc.com</a></p>
+    </section>
+    
+</body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     const labels = {{{labels}}};
@@ -97,3 +165,5 @@
         },
     });
 </script>
+
+

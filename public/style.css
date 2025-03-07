@@ -1,119 +1,60 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-}
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 10px;
-    text-align: center;
-}
-
-th {
-    background-color: #007bff;
-    color: #fff;
-}
-
-footer {
-    text-align: center; /* Center-align text horizontally */
-    padding: 10px;      /* Add some padding for spacing */
-    background-color: #f2f2f2; /* Optional: Add a background color */
-    position: fixed;    /* Fix the footer at the bottom of the page */
-    bottom: 0;          /* Align it to the bottom */
-    width: 100%;        /* Make it span the full width */
-}
-
-body {
-    margin: 0; /* Remove default margins */
-    padding-bottom: 50px; /* Prevent content from overlapping the footer */
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.form-container {
-    flex: 1;
-    max-width: 40%;
-}
-
-.results-container {
-    flex: 2;
-    max-width: 60%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-label, input, button {
-    width: 100%;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-
-
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(120deg, #004e92, #00c6ff); 
+            color: #333; 
+        }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .form-container, .results-container, .feedback-container { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        }
+        label { font-weight: bold; }
+        input, textarea { 
+            width: 100%; 
+            padding: 12px; 
+            margin: 5px 0; 
+            border: 1px solid #ccc; 
+            border-radius: 6px; 
+        }
+        button { 
+            background: linear-gradient(120deg, #007991, #78ffd6); 
+            color: white; 
+            padding: 12px; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-size: 16px; 
+        }
+        button:hover { background: linear-gradient(120deg, #005f73, #78ffd6); }
+        .nav { 
+            display: flex; 
+            justify-content: center; 
+            background: linear-gradient(120deg, #007991, #78ffd6); 
+            padding: 15px; 
+            border-radius: 0 0 12px 12px; 
+        }
+        .nav a { 
+            color: white; 
+            margin: 0 20px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 18px; 
+            transition: 0.3s; 
+        }
+        .nav a:hover { text-decoration: underline; }
+        .section { padding: 60px; text-align: center; }
+        footer { 
+            background: linear-gradient(120deg, #007991, #78ffd6); 
+            color: white; 
+            text-align: center; 
+            padding: 15px; 
+            margin-top: 30px; 
+            font-size: 14px; 
+        }
+        .results-container {
+            display: block;
+            margin-top: 20px;
+        }
