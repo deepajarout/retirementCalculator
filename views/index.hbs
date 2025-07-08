@@ -22,8 +22,17 @@
         <p class="text-gray-600 mt-3 max-w-xl mx-auto">Enter your financial details, and our tool will forecast your future savings and investment growth. Empower yourself with better financial planning today.</p>
     </section>
     
-    <div class="container" id="calculator">
-        <div class="form-container">
+    <div class="container" >
+   
+    <!-- TAB BUTTONS -->
+<div class="tab-buttons" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px;">
+  <button onclick="showTab('calculator')" id="tab1" class="tab-button active">Survival Duration</button>
+  <button onclick="showTab('calc2')" id="tab2" class="tab-button">Required Retirement Savings</button>
+</div>
+
+<!-- TAB 1: Survival Duration (existing calculator) -->
+<div class="container calculator-tab"  id="calculator">
+     <div class="form-container">
             <h2 class="text-xl font-bold text-blue-600">Enter Your Details</h2>
             <form action="/" method="POST">
                 <label for="initialAmount">Initial Savings:</label>
@@ -35,10 +44,10 @@
                 <label for="percentageIncreaseMonthlyContribution">Percentage % Increase In Monthly Contribution :</label>
                 <input type="number" id="percentageIncreaseMonthlyContribution" name="percentageIncreaseMonthlyContribution" required step="0.01" value="0">
     
-                <label for="interestRate">Interest Rate (%):</label>
+                <label for="interestRate">Interest Rate (% per annum):</label>
                 <input type="number" id="interestRate" name="interestRate" required step="0.01">
     
-                <label for="inflationRate">Inflation Rate (%):</label>
+                <label for="inflationRate">Inflation Rate (% per annum):</label>
                 <input type="number" id="inflationRate" name="inflationRate" required step="0.01">
     
                 <label for="currentAge">Current Age:</label>
@@ -53,38 +62,7 @@
                 <button type="submit" class="w-full mt-4">Calculate</button>
             </form>
         </div>
-
-
-    {{!-- <div class="results-container">
-        {{#if results}}
-        <h2>Results</h2>
-        <div>
-            <canvas id="retirementChart"></canvas>
-        </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Age</th>
-                    <th>Total Invested</th>
-                    <th>Total Savings</th>
-                    <th>Withdrawals</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each results}}
-                <tr>
-                    <td>{{this.age}}</td>
-                    <td>${{this.totalInvested}}</td>
-                    <td>${{this.totalSavings}}</td>
-                    <td>${{this.withdrawal}}</td>
-                </tr>
-                {{/each}}
-            </tbody>
-        </table>
-        {{/if}}
-    </div> --}}
-           {{#if results}}
+    {{#if results}}
         <div class="results-container">
                
             <h2 class="text-xl font-bold text-blue-600">Results</h2>
@@ -112,18 +90,123 @@
              
         </div>
              {{/if}}
+</div>
+
+<!-- TAB 2: Required Savings for 30-Year Retirement -->
+<div class="container calculator-tab" id="calc2" style="display: none;">
+  <div class="form-container">
+    <h2 class="text-xl font-bold text-blue-600">How Much Should You Save to Survive 30 Years?</h2>
+    <form onsubmit="calculateRequiredSavings(event)">
+      <label for="desiredMonthlyWithdrawal">Desired Monthly Withdrawal:</label>
+      <input type="number" id="desiredMonthlyWithdrawal" required step="0.01">
+
+      <label for="retirementYears">Years to Withdraw (e.g., 30):</label>
+      <input type="number" id="retirementYears" value="30" required>
+
+      <label for="expectedInterestRate">Expected Post-Retirement Interest Rate (%):</label>
+      <input type="number" id="expectedInterestRate" required step="0.01">
+
+      <label for="expectedInflationRate">Expected Inflation Rate (%):</label>
+      <input type="number" id="expectedInflationRate" required step="0.01">
+
+      <button type="submit" class="w-full mt-4">Calculate</button>
+    </form>
+    <div id="requiredSavingsResult" class="result mt-4 font-bold text-green-700"></div>
+  </div>
+</div>
+  
+
+<!-- JS -->
+<script>
+  function showTab(tabId) {
+    const tabs = document.querySelectorAll('.calculator-tab');
+    const buttons = document.querySelectorAll('.tab-button');
+    tabs.forEach(tab => {
+      tab.style.display = (tab.id === tabId) ? 'block' : 'none';
+    });
+    buttons.forEach(btn => btn.classList.remove('active'));
+    document.getElementById(tabId === 'calculator' ? 'tab1' : 'tab2').classList.add('active');
+  }
+
+function calculateRequiredSavings(e) {
+    e.preventDefault();
+
+    // Grab input values
+    const withdrawalInput = document.getElementById('desiredMonthlyWithdrawal');
+    const yearsInput = document.getElementById('retirementYears');
+    const interestInput = document.getElementById('expectedInterestRate');
+    const inflationInput = document.getElementById('expectedInflationRate');
+    const resultBox = document.getElementById('requiredSavingsResult');
+
+    // Convert inputs to numbers
+    const monthlyWithdrawal = parseFloat(withdrawalInput.value);
+    const years = parseInt(yearsInput.value);
+    const interestRate = parseFloat(interestInput.value) / 100;
+    const inflationRate = parseFloat(inflationInput.value) / 100;
+
+    // Validation
+    if (
+      isNaN(monthlyWithdrawal) || monthlyWithdrawal <= 0 ||
+      isNaN(years) || years <= 0 ||
+      isNaN(interestRate) || isNaN(inflationRate)
+    ) {
+      resultBox.innerText = "❌ Please enter valid positive numbers in all fields.";
+      resultBox.style.color = "red";
+      return;
+    }
+
+    // Calculate real interest rate and savings
+    const months = years * 12;
+    const realRate = (1 + interestRate) / (1 + inflationRate) - 1;
+    const monthlyRealRate = Math.pow(1 + realRate, 1 / 12) - 1;
+
+    // If monthlyRealRate is 0 (rare case), avoid division by 0
+    if (monthlyRealRate === 0) {
+      resultBox.innerText = "❌ Interest rate must be different from inflation rate.";
+      resultBox.style.color = "red";
+      return;
+    }
+
+    const requiredSavings =
+      monthlyWithdrawal *
+      ((1 - Math.pow(1 + monthlyRealRate, -months)) / monthlyRealRate);
+
+    // Display result
+    resultBox.innerText = `✅ You will need approximately ₹${requiredSavings.toFixed(2)} at retirement.`;
+    resultBox.style.color = "green";
+  }
+
+  
+</script>
+
+<!-- Optional tab button styling -->
+<style>
+  .tab-button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background: #eee;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .tab-button.active {
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+  }
+</style>
     </div>
     
     <section id="feedback" class="section bg-white shadow-lg">
         <h2 class="text-2xl font-bold text-blue-600">Feedback</h2>
         <p class="text-gray-600 mt-3 max-w-xl mx-auto">We value your feedback! Let us know how we can improve your experience.</p>
-        <textarea placeholder="Your feedback..." rows="4"></textarea>
-        <button class="mt-4">Submit Feedback</button>
+        <textarea id="feedbackText" placeholder="Your feedback..." rows="4"></textarea>
+        <button class="mt-4" onclick="sendEmail()">Submit Feedback</button>
     </section>
     
     <section id="contact" class="section bg-gray-100">
         <h2 class="text-2xl font-bold text-blue-600">Get in Touch</h2>
-        <p class="text-gray-600 mt-3 max-w-xl mx-auto">Have questions? Contact us at <a href="mailto:support@financialcalc.com" class="text-blue-500">support@financialcalc.com</a></p>
+        <p class="text-gray-600 mt-3 max-w-xl mx-auto">Have questions? Contact us at <a href="mailto:dj.jarout@gmail.com" class="text-blue-500">dj.jarout@gmail.com</a></p>
     </section>
     
 </body>
@@ -164,6 +247,22 @@
             },
         },
     });
+</script>
+
+<script>
+  function sendEmail() {
+    const feedback = document.getElementById("feedbackText").value.trim();
+    if (!feedback) {
+      alert("Please enter your feedback before submitting.");
+      return;
+    }
+
+    const subject = encodeURIComponent("User Feedback");
+    const body = encodeURIComponent(feedback);
+    const email = "dj.jarout@gmail.com"; // Replace with your email address
+
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  }
 </script>
 
 
