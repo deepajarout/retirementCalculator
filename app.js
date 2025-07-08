@@ -89,88 +89,92 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //     return results;
 // }
-function calculateInvestment({
-    initialAmount,
-    monthlyContribution,
-    interestRate, // Annual interest rate
-    inflationRate, // Annual inflation rate
-    currentAge,
-    retirementAge,
-    monthlyWithdrawal,
-    percentageIncreaseMonthlyContribution 
-}) {
+function calculateInvestment(params) {
+  try {
     const results = [];
 
-    // ✅ Validate ages
+    const {
+      initialAmount,
+      monthlyContribution: initialMonthlyContribution,
+      interestRate,
+      inflationRate,
+      currentAge,
+      retirementAge,
+      monthlyWithdrawal,
+      percentageIncreaseMonthlyContribution
+    } = params;
+
     if (
-        typeof currentAge !== "number" ||
-        typeof retirementAge !== "number" ||
-        currentAge <= 0 || retirementAge <= 0 ||
-        currentAge > 110 || retirementAge > 110 ||
-        isNaN(currentAge) || isNaN(retirementAge)
+      typeof currentAge !== "number" ||
+      typeof retirementAge !== "number" ||
+      currentAge <= 0 || retirementAge <= 0 ||
+      currentAge > 110 || retirementAge > 110 ||
+      isNaN(currentAge) || isNaN(retirementAge)
     ) {
-        throw new Error("Invalid age provided. Age should be between 1 and 110.");
+      throw new Error("Invalid age provided. Age should be between 1 and 110.");
     }
 
     if (retirementAge <= currentAge) {
-        throw new Error("Retirement age must be greater than current age.");
+      throw new Error("Retirement age must be greater than current age.");
     }
 
     let currentAmount = initialAmount;
     let totalInvested = initialAmount;
     let age = currentAge;
+    let monthlyContribution = initialMonthlyContribution;
 
-    // ✅ Phase 1: Pre-retirement
+    // Phase 1: Pre-retirement
     while (age < retirementAge) {
-        const yearlyContribution = monthlyContribution * 12;
-        currentAmount += currentAmount * (interestRate / 100);
-        currentAmount += yearlyContribution;
-        totalInvested += yearlyContribution;
+      const yearlyContribution = monthlyContribution * 12;
+      currentAmount += currentAmount * (interestRate / 100);
+      currentAmount += yearlyContribution;
+      totalInvested += yearlyContribution;
+      currentAmount += monthlyContribution * 6 * (interestRate / 100);
+      currentAmount -= currentAmount * (inflationRate / 100);
+      monthlyContribution += monthlyContribution * (percentageIncreaseMonthlyContribution / 100);
 
-        // Extra interest gain on monthly deposits approximation
-        currentAmount += monthlyContribution * 6 * (interestRate / 100);
+      results.push({
+        age: ++age,
+        totalInvested: totalInvested.toFixed(2),
+        totalSavings: currentAmount.toFixed(2),
+        withdrawal: 0,
+      });
 
-        // Inflation adjustment
-        currentAmount -= currentAmount * (inflationRate / 100);
-
-        // Increase monthly contribution annually
-        monthlyContribution += monthlyContribution * (percentageIncreaseMonthlyContribution / 100);
-
-        results.push({
-            age: ++age,
-            totalInvested: totalInvested.toFixed(2),
-            totalSavings: currentAmount.toFixed(2),
-            withdrawal: 0,
-        });
+      if (!isFinite(currentAmount)) {
+        throw new Error("Calculation error: result is too large or invalid.");
+      }
     }
 
-    // ✅ Phase 2: Post-retirement
+    // Phase 2: Post-retirement
     while (currentAmount > 0 && age <= 110) {
-        const yearlyWithdrawal = monthlyWithdrawal * 12;
-        currentAmount -= yearlyWithdrawal;
+      const yearlyWithdrawal = monthlyWithdrawal * 12;
+      currentAmount -= yearlyWithdrawal;
+      currentAmount += currentAmount * (interestRate / 100);
+      currentAmount += monthlyWithdrawal * 6 * (interestRate / 100);
+      currentAmount -= currentAmount * (inflationRate / 100);
+      currentAmount = Math.max(currentAmount, 0);
 
-        // Interest on remaining savings
-        currentAmount += currentAmount * (interestRate / 100);
-        currentAmount += monthlyWithdrawal * 6 * (interestRate / 100);
+      results.push({
+        age: ++age,
+        totalInvested: totalInvested.toFixed(2),
+        totalSavings: currentAmount.toFixed(2),
+        withdrawal: yearlyWithdrawal.toFixed(2),
+      });
 
-        // Inflation impact
-        currentAmount -= currentAmount * (inflationRate / 100);
+      if (!isFinite(currentAmount)) {
+        throw new Error("Calculation error: result is too large or invalid.");
+      }
 
-        // Avoid negative savings
-        currentAmount = Math.max(currentAmount, 0);
-
-        results.push({
-            age: ++age,
-            totalInvested: totalInvested.toFixed(2),
-            totalSavings: currentAmount.toFixed(2),
-            withdrawal: yearlyWithdrawal.toFixed(2),
-        });
-
-        if (age > 110) break; // Safety stop
+      if (results.length > 100) break; // safety cap for mobile
     }
 
     return results;
+  } catch (error) {
+    alert(`❌ Calculation Error: ${error.message}`);
+    return [];
+  }
 }
+
 
 
 // Routes
