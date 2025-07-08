@@ -14,81 +14,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Function to calculate investment growth and survival
-// function calculateInvestment({
-//     initialAmount,
-//     monthlyContribution,
-//     interestRate, // Annual interest rate
-//     inflationRate, // Annual inflation rate
-//     currentAge,
-//     retirementAge,
-//     monthlyWithdrawal,
-//     percentageIncreaseMonthlyContribution 
-// }) {
-//     const results = [];
-//     let currentAmount = initialAmount; // Initial savings
-//     let totalInvested = initialAmount; // Tracks total contributions
-//     let age = currentAge;
-    
-//     if (typeof age !== "number" || age > 150 || age < 0 || isNaN(age)) {
-//         console.log("Humans don't have that kind of age");
-//       }
-    
-//       if (
-//         typeof retirementAge !== "number" ||
-//         retirementAge > 150 ||
-//         retirementAge < 0 ||
-//         isNaN(retirementAge)
-//       ) {
-//         console.log("Humans don't retire in that kind of age");
-//       }
-//     // Phase 1: Pre-retirement (contributions + annual interest growth)
-//     while (age < retirementAge) {
-//         // Add annual contributions
-//         const yearlyContribution = monthlyContribution * 12;
-//         currentAmount += currentAmount * (interestRate / 100);
-//         currentAmount += yearlyContribution;
-//         totalInvested += yearlyContribution;
-//         // Adding annual interest rate
-//          currentAmount += monthlyContribution * 6 * (interestRate / 100); // average inerest rate of the year of all months average
-
-//          //Inflation adjusted
-//          currentAmount -= currentAmount * (inflationRate / 100);
-
-//         monthlyContribution +=
-//         monthlyContribution * (percentageIncreaseMonthlyContribution / 100);
-  
-//         results.push({
-//             age: ++age,
-//             totalInvested: totalInvested.toFixed(2),
-//             totalSavings: currentAmount.toFixed(2),
-//             withdrawal: 0, // No withdrawals pre-retirement
-//         });
-//     }
-
-//     // Phase 2: Post-retirement (withdrawals + annual interest + inflation adjustment)
-//     while (currentAmount > 0) {
-//                 // Deduct annual withdrawals
-//                 const yearlyWithdrawal = monthlyWithdrawal * 12;
-//                 currentAmount -= yearlyWithdrawal;
-//         // Apply annual interest rate
-//         currentAmount += currentAmount * (interestRate / 100);
-//         currentAmount += monthlyWithdrawal * 6  * (interestRate / 100);
-//         // Adjust for annual inflation
-//         currentAmount -= currentAmount * (inflationRate / 100);
-
-//         if (currentAmount <= 0) break; // Stop if savings are exhausted
-
-//         results.push({
-//             age: ++age,
-//             totalInvested: totalInvested.toFixed(2), // No new contributions post-retirement
-//             totalSavings: currentAmount > 0 ? currentAmount.toFixed(2) : 0,
-//             withdrawal: yearlyWithdrawal.toFixed(2),
-//         });
-//     }
-
-//     return results;
-// }
 function calculateInvestment(params) {
   try {
     const results = [];
@@ -174,8 +99,6 @@ function calculateInvestment(params) {
     return [];
   }
 }
-
-
 
 // Routes
 app.get('/', (req, res) => {
