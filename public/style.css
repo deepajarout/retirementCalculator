@@ -58,3 +58,20 @@
             display: block;
             margin-top: 20px;
         }
+
+        .table-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.results-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+}
+
+.results-table th, .results-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}

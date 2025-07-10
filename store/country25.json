@@ -1,0 +1,1367 @@
+[
+  {
+    "name": "Afghanistan",
+    "symbol": "🇦🇫",
+    "currency": "AFN",
+    "25_year_inflation_avg": 8.2,
+    "source": "World Bank/IMF estimates"
+  },
+  {
+    "name": "Albania",
+    "symbol": "🇦🇱",
+    "currency": "ALL",
+    "25_year_inflation_avg": 3.5,
+    "source": "Bank of Albania"
+  },
+  {
+    "name": "Algeria",
+    "symbol": "🇩🇿",
+    "currency": "DZD",
+    "25_year_inflation_avg": 5.1,
+    "source": "Algerian Central Bank"
+  },
+  {
+    "name": "Andorra",
+    "symbol": "🇦🇩",
+    "currency": "EUR",
+    "25_year_inflation_avg": 1.9,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Angola",
+    "symbol": "🇦🇴",
+    "currency": "AOA",
+    "25_year_inflation_avg": 22.4,
+    "source": "National Bank of Angola"
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "symbol": "🇦🇬",
+    "currency": "XCD",
+    "25_year_inflation_avg": 2.3,
+    "source": "ECCB"
+  },
+  {
+    "name": "Argentina",
+    "symbol": "🇦🇷",
+    "currency": "ARS",
+    "25_year_inflation_avg": 42.7,
+    "source": "INDEC"
+  },
+  {
+    "name": "Armenia",
+    "symbol": "🇦🇲",
+    "currency": "AMD",
+    "25_year_inflation_avg": 4.8,
+    "source": "CBR Armenia"
+  },
+  {
+    "name": "Australia",
+    "symbol": "🇦🇺",
+    "currency": "AUD",
+    "25_year_inflation_avg": 2.4,
+    "source": "ABS"
+  },
+  {
+    "name": "Austria",
+    "symbol": "🇦🇹",
+    "currency": "EUR",
+    "25_year_inflation_avg": 1.8,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Azerbaijan",
+    "symbol": "🇦🇿",
+    "currency": "AZN",
+    "25_year_inflation_avg": 8.9,
+    "source": "CBA"
+  },
+  {
+    "name": "Bahamas",
+    "symbol": "🇧🇸",
+    "currency": "BSD",
+    "25_year_inflation_avg": 2.1,
+    "source": "CBOB"
+  },
+  {
+    "name": "Bahrain",
+    "symbol": "🇧🇭",
+    "currency": "BHD",
+    "25_year_inflation_avg": 2.0,
+    "source": "CBB"
+  },
+  {
+    "name": "Bangladesh",
+    "symbol": "🇧🇩",
+    "currency": "BDT",
+    "25_year_inflation_avg": 6.5,
+    "source": "Bangladesh Bank"
+  },
+  {
+    "name": "Barbados",
+    "symbol": "🇧🇧",
+    "currency": "BBD",
+    "25_year_inflation_avg": 3.8,
+    "source": "CBB"
+  },
+  {
+    "name": "Belarus",
+    "symbol": "🇧🇾",
+    "currency": "BYN",
+    "25_year_inflation_avg": 15.2,
+    "source": "NBRB"
+  },
+  {
+    "name": "Belgium",
+    "symbol": "🇧🇪",
+    "currency": "EUR",
+    "25_year_inflation_avg": 1.9,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Belize",
+    "symbol": "🇧🇿",
+    "currency": "BZD",
+    "25_year_inflation_avg": 2.5,
+    "source": "CBB"
+  },
+  {
+    "name": "Benin",
+    "symbol": "🇧🇯",
+    "currency": "XOF",
+    "25_year_inflation_avg": 2.8,
+    "source": "BCEAO"
+  },
+  {
+    "name": "Bhutan",
+    "symbol": "🇧🇹",
+    "currency": "BTN",
+    "25_year_inflation_avg": 5.6,
+    "source": "RMA"
+  },
+  {
+    "name": "Bolivia",
+    "symbol": "🇧🇴",
+    "currency": "BOB",
+    "25_year_inflation_avg": 4.3,
+    "source": "INE"
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "symbol": "🇧🇦",
+    "currency": "BAM",
+    "25_year_inflation_avg": 3.2,
+    "source": "CBBH"
+  },
+  {
+    "name": "Botswana",
+    "symbol": "🇧🇼",
+    "currency": "BWP",
+    "25_year_inflation_avg": 6.8,
+    "source": "BoB"
+  },
+  {
+    "name": "Brazil",
+    "symbol": "🇧🇷",
+    "currency": "BRL",
+    "25_year_inflation_avg": 6.8,
+    "source": "BCB"
+  },
+  {
+    "name": "Brunei",
+    "symbol": "🇧🇳",
+    "currency": "BND",
+    "25_year_inflation_avg": 1.2,
+    "source": "JPKE"
+  },
+  {
+    "name": "Bulgaria",
+    "symbol": "🇧🇬",
+    "currency": "BGN",
+    "25_year_inflation_avg": 4.5,
+    "source": "NSI"
+  },
+  {
+    "name": "Burkina Faso",
+    "symbol": "🇧🇫",
+    "currency": "XOF",
+    "25_year_inflation_avg": 2.5,
+    "source": "BCEAO"
+  },
+  {
+    "name": "Burundi",
+    "symbol": "🇧🇮",
+    "currency": "BIF",
+    "25_year_inflation_avg": 12.4,
+    "source": "BRB"
+  },
+  {
+    "name": "Cabo Verde",
+    "symbol": "🇨🇻",
+    "currency": "CVE",
+    "25_year_inflation_avg": 2.3,
+    "source": "BCV"
+  },
+  {
+    "name": "Cambodia",
+    "symbol": "🇰🇭",
+    "currency": "KHR",
+    "25_year_inflation_avg": 4.1,
+    "source": "NBC"
+  },
+  {
+    "name": "Cameroon",
+    "symbol": "🇨🇲",
+    "currency": "XAF",
+    "25_year_inflation_avg": 2.9,
+    "source": "BEAC"
+  },
+  {
+    "name": "Canada",
+    "symbol": "🇨🇦",
+    "currency": "CAD",
+    "25_year_inflation_avg": 2.0,
+    "source": "StatCan"
+  },
+  {
+    "name": "Central African Republic",
+    "symbol": "🇨🇫",
+    "currency": "XAF",
+    "25_year_inflation_avg": 3.8,
+    "source": "BEAC"
+  },
+  {
+    "name": "Chad",
+    "symbol": "🇹🇩",
+    "currency": "XAF",
+    "25_year_inflation_avg": 4.2,
+    "source": "BEAC"
+  },
+  {
+    "name": "Chile",
+    "symbol": "🇨🇱",
+    "currency": "CLP",
+    "25_year_inflation_avg": 3.9,
+    "source": "BCCh"
+  },
+  {
+    "name": "China",
+    "symbol": "🇨🇳",
+    "currency": "CNY",
+    "25_year_inflation_avg": 2.1,
+    "source": "NBS"
+  },
+  {
+    "name": "Colombia",
+    "symbol": "🇨🇴",
+    "currency": "COP",
+    "25_year_inflation_avg": 5.5,
+    "source": "BanRep"
+  },
+  {
+    "name": "Comoros",
+    "symbol": "🇰🇲",
+    "currency": "KMF",
+    "25_year_inflation_avg": 3.5,
+    "source": "BCRC"
+  },
+  {
+    "name": "Congo (DRC)",
+    "symbol": "🇨🇩",
+    "currency": "CDF",
+    "25_year_inflation_avg": 18.7,
+    "source": "BCC"
+  },
+  {
+    "name": "Congo (Republic)",
+    "symbol": "🇨🇬",
+    "currency": "XAF",
+    "25_year_inflation_avg": 4.8,
+    "source": "BEAC"
+  },
+  {
+    "name": "Costa Rica",
+    "symbol": "🇨🇷",
+    "currency": "CRC",
+    "25_year_inflation_avg": 7.2,
+    "source": "BCCR"
+  },
+  {
+    "name": "Côte d'Ivoire",
+    "symbol": "🇨🇮",
+    "currency": "XOF",
+    "25_year_inflation_avg": 2.6,
+    "source": "BCEAO"
+  },
+  {
+    "name": "Croatia",
+    "symbol": "🇭🇷",
+    "currency": "EUR",
+    "25_year_inflation_avg": 2.7,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Cuba",
+    "symbol": "🇨🇺",
+    "currency": "CUP",
+    "25_year_inflation_avg": 8.9,
+    "source": "ONEI"
+  },
+  {
+    "name": "Cyprus",
+    "symbol": "🇨🇾",
+    "currency": "EUR",
+    "25_year_inflation_avg": 2.1,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Czech Republic",
+    "symbol": "🇨🇿",
+    "currency": "CZK",
+    "25_year_inflation_avg": 3.2,
+    "source": "CNB"
+  },
+  {
+    "name": "Denmark",
+    "symbol": "🇩🇰",
+    "currency": "DKK",
+    "25_year_inflation_avg": 1.7,
+    "source": "DST"
+  },
+  {
+    "name": "Djibouti",
+    "symbol": "🇩🇯",
+    "currency": "DJF",
+    "25_year_inflation_avg": 3.1,
+    "source": "BSD"
+  },
+  {
+    "name": "Dominica",
+    "symbol": "🇩🇲",
+    "currency": "XCD",
+    "25_year_inflation_avg": 2.2,
+    "source": "ECCB"
+  },
+  {
+    "name": "Dominican Republic",
+    "symbol": "🇩🇴",
+    "currency": "DOP",
+    "25_year_inflation_avg": 6.4,
+    "source": "BCRD"
+  },
+  {
+    "name": "Ecuador",
+    "symbol": "🇪🇨",
+    "currency": "USD",
+    "25_year_inflation_avg": 3.8,
+    "source": "ECB"
+  },
+  {
+    "name": "Egypt",
+    "symbol": "🇪🇬",
+    "currency": "EGP",
+    "25_year_inflation_avg": 10.3,
+    "source": "CBE"
+  },
+  {
+    "name": "El Salvador",
+    "symbol": "🇸🇻",
+    "currency": "USD",
+    "25_year_inflation_avg": 2.9,
+    "source": "BCR"
+  },
+  {
+    "name": "Equatorial Guinea",
+    "symbol": "🇬🇶",
+    "currency": "XAF",
+    "25_year_inflation_avg": 5.2,
+    "source": "BEAC"
+  },
+  {
+    "name": "Eritrea",
+    "symbol": "🇪🇷",
+    "currency": "ERN",
+    "25_year_inflation_avg": 9.8,
+    "source": "BoE"
+  },
+  {
+    "name": "Estonia",
+    "symbol": "🇪🇪",
+    "currency": "EUR",
+    "25_year_inflation_avg": 3.5,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Eswatini",
+    "symbol": "🇸🇿",
+    "currency": "SZL",
+    "25_year_inflation_avg": 6.2,
+    "source": "CBS"
+  },
+  {
+    "name": "Ethiopia",
+    "symbol": "🇪🇹",
+    "currency": "ETB",
+    "25_year_inflation_avg": 14.8,
+    "source": "NBE"
+  },
+  {
+    "name": "Fiji",
+    "symbol": "🇫🇯",
+    "currency": "FJD",
+    "25_year_inflation_avg": 3.9,
+    "source": "RBF"
+  },
+  {
+    "name": "Finland",
+    "symbol": "🇫🇮",
+    "currency": "EUR",
+    "25_year_inflation_avg": 1.6,
+    "source": "Eurostat"
+  },
+  {
+    "name": "France",
+    "symbol": "🇫🇷",
+    "currency": "EUR",
+    "25_year_inflation_avg": 1.7,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Gabon",
+    "symbol": "🇬🇦",
+    "currency": "XAF",
+    "25_year_inflation_avg": 3.5,
+    "source": "BEAC"
+  },
+  {
+    "name": "Gambia",
+    "symbol": "🇬🇲",
+    "currency": "GMD",
+    "25_year_inflation_avg": 7.8,
+    "source": "CBG"
+  },
+  {
+    "name": "Georgia",
+    "symbol": "🇬🇪",
+    "currency": "GEL",
+    "25_year_inflation_avg": 6.9,
+    "source": "NBG"
+  },
+  {
+    "name": "Germany",
+    "symbol": "🇩🇪",
+    "currency": "EUR",
+    "25_year_inflation_avg": 1.7,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Ghana",
+    "symbol": "🇬🇭",
+    "currency": "GHS",
+    "25_year_inflation_avg": 15.2,
+    "source": "BoG"
+  },
+  {
+    "name": "Greece",
+    "symbol": "🇬🇷",
+    "currency": "EUR",
+    "25_year_inflation_avg": 2.8,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Grenada",
+    "symbol": "🇬🇩",
+    "currency": "XCD",
+    "25_year_inflation_avg": 2.4,
+    "source": "ECCB"
+  },
+  {
+    "name": "Guatemala",
+    "symbol": "🇬🇹",
+    "currency": "GTQ",
+    "25_year_inflation_avg": 6.1,
+    "source": "BANGUAT"
+  },
+  {
+    "name": "Guinea",
+    "symbol": "🇬🇳",
+    "currency": "GNF",
+    "25_year_inflation_avg": 11.5,
+    "source": "BCRG"
+  },
+  {
+    "name": "Guinea-Bissau",
+    "symbol": "🇬🇼",
+    "currency": "XOF",
+    "25_year_inflation_avg": 3.2,
+    "source": "BCEAO"
+  },
+  {
+    "name": "Guyana",
+    "symbol": "🇬🇾",
+    "currency": "GYD",
+    "25_year_inflation_avg": 5.4,
+    "source": "BoG"
+  },
+  {
+    "name": "Haiti",
+    "symbol": "🇭🇹",
+    "currency": "HTG",
+    "25_year_inflation_avg": 14.2,
+    "source": "BRH"
+  },
+  {
+    "name": "Honduras",
+    "symbol": "🇭🇳",
+    "currency": "HNL",
+    "25_year_inflation_avg": 6.8,
+    "source": "BCH"
+  },
+  {
+    "name": "Hungary",
+    "symbol": "🇭🇺",
+    "currency": "HUF",
+    "25_year_inflation_avg": 5.9,
+    "source": "MNB"
+  },
+  {
+    "name": "Iceland",
+    "symbol": "🇮🇸",
+    "currency": "ISK",
+    "25_year_inflation_avg": 5.2,
+    "source": "CBI"
+  },
+  {
+    "name": "India",
+    "symbol": "🇮🇳",
+    "currency": "INR",
+    "25_year_inflation_avg": 6.0,
+    "source": "RBI"
+  },
+  {
+    "name": "Indonesia",
+    "symbol": "🇮🇩",
+    "currency": "IDR",
+    "25_year_inflation_avg": 6.8,
+    "source": "BI"
+  },
+  {
+    "name": "Iran",
+    "symbol": "🇮🇷",
+    "currency": "IRR",
+    "25_year_inflation_avg": 18.9,
+    "source": "CBI"
+  },
+  {
+    "name": "Iraq",
+    "symbol": "🇮🇶",
+    "currency": "IQD",
+    "25_year_inflation_avg": 8.7,
+    "source": "CBI"
+  },
+  {
+    "name": "Ireland",
+    "symbol": "🇮🇪",
+    "currency": "EUR",
+    "25_year_inflation_avg": 2.0,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Israel",
+    "symbol": "🇮🇱",
+    "currency": "ILS",
+    "25_year_inflation_avg": 2.3,
+    "source": "CBS"
+  },
+  {
+    "name": "Italy",
+    "symbol": "🇮🇹",
+    "currency": "EUR",
+    "25_year_inflation_avg": 2.1,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Jamaica",
+    "symbol": "🇯🇲",
+    "currency": "JMD",
+    "25_year_inflation_avg": 9.2,
+    "source": "BOJ"
+  },
+  {
+    "name": "Japan",
+    "symbol": "🇯🇵",
+    "currency": "JPY",
+    "25_year_inflation_avg": 0.3,
+    "source": "BoJ"
+  },
+  {
+    "name": "Jordan",
+    "symbol": "🇯🇴",
+    "currency": "JOD",
+    "25_year_inflation_avg": 3.5,
+    "source": "CBJ"
+  },
+  {
+    "name": "Kazakhstan",
+    "symbol": "🇰🇿",
+    "currency": "KZT",
+    "25_year_inflation_avg": 8.1,
+    "source": "NBK"
+  },
+  {
+    "name": "Kenya",
+    "symbol": "🇰🇪",
+    "currency": "KES",
+    "25_year_inflation_avg": 8.4,
+    "source": "CBK"
+  },
+  {
+    "name": "Kiribati",
+    "symbol": "🇰🇮",
+    "currency": "AUD",
+    "25_year_inflation_avg": 2.5,
+    "source": "IMF"
+  },
+  {
+    "name": "Korea, North",
+    "symbol": "🇰🇵",
+    "currency": "KPW",
+    "25_year_inflation_avg": null,
+    "source": "No reliable data"
+  },
+  {
+    "name": "Korea, South",
+    "symbol": "🇰🇷",
+    "currency": "KRW",
+    "25_year_inflation_avg": 2.8,
+    "source": "BoK"
+  },
+  {
+    "name": "Kosovo",
+    "symbol": "🇽🇰",
+    "currency": "EUR",
+    "25_year_inflation_avg": 3.2,
+    "source": "ASK"
+  },
+  {
+    "name": "Kuwait",
+    "symbol": "🇰🇼",
+    "currency": "KWD",
+    "25_year_inflation_avg": 2.9,
+    "source": "CBK"
+  },
+  {
+    "name": "Kyrgyzstan",
+    "symbol": "🇰🇬",
+    "currency": "KGS",
+    "25_year_inflation_avg": 7.8,
+    "source": "NBKR"
+  },
+  {
+    "name": "Laos",
+    "symbol": "🇱🇦",
+    "currency": "LAK",
+    "25_year_inflation_avg": 12.5,
+    "source": "BoL"
+  },
+  {
+    "name": "Latvia",
+    "symbol": "🇱🇻",
+    "currency": "EUR",
+    "25_year_inflation_avg": 3.8,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Lebanon",
+    "symbol": "🇱🇧",
+    "currency": "LBP",
+    "25_year_inflation_avg": 25.7,
+    "source": "CAS"
+  },
+  {
+    "name": "Lesotho",
+    "symbol": "🇱🇸",
+    "currency": "LSL",
+    "25_year_inflation_avg": 6.5,
+    "source": "CBL"
+  },
+  {
+    "name": "Liberia",
+    "symbol": "🇱🇷",
+    "currency": "LRD",
+    "25_year_inflation_avg": 9.8,
+    "source": "CBL"
+  },
+  {
+    "name": "Libya",
+    "symbol": "🇱🇾",
+    "currency": "LYD",
+    "25_year_inflation_avg": 10.2,
+    "source": "CBL"
+  },
+  {
+    "name": "Liechtenstein",
+    "symbol": "🇱🇮",
+    "currency": "CHF",
+    "25_year_inflation_avg": 1.2,
+    "source": "IMF"
+  },
+  {
+    "name": "Lithuania",
+    "symbol": "🇱🇹",
+    "currency": "EUR",
+    "25_year_inflation_avg": 3.1,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Luxembourg",
+    "symbol": "🇱🇺",
+    "currency": "EUR",
+    "25_year_inflation_avg": 2.0,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Madagascar",
+    "symbol": "🇲🇬",
+    "currency": "MGA",
+    "25_year_inflation_avg": 9.5,
+    "source": "BFM"
+  },
+  {
+    "name": "Malawi",
+    "symbol": "🇲🇼",
+    "currency": "MWK",
+    "25_year_inflation_avg": 15.8,
+    "source": "RBM"
+  },
+  {
+    "name": "Malaysia",
+    "symbol": "🇲🇾",
+    "currency": "MYR",
+    "25_year_inflation_avg": 2.5,
+    "source": "BNM"
+  },
+  {
+    "name": "Maldives",
+    "symbol": "🇲🇻",
+    "currency": "MVR",
+    "25_year_inflation_avg": 3.8,
+    "source": "MMA"
+  },
+  {
+    "name": "Mali",
+    "symbol": "🇲🇱",
+    "currency": "XOF",
+    "25_year_inflation_avg": 2.7,
+    "source": "BCEAO"
+  },
+  {
+    "name": "Malta",
+    "symbol": "🇲🇹",
+    "currency": "EUR",
+    "25_year_inflation_avg": 2.2,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Marshall Islands",
+    "symbol": "🇲🇭",
+    "currency": "USD",
+    "25_year_inflation_avg": 2.1,
+    "source": "IMF"
+  },
+  {
+    "name": "Mauritania",
+    "symbol": "🇲🇷",
+    "currency": "MRU",
+    "25_year_inflation_avg": 6.9,
+    "source": "BCM"
+  },
+  {
+    "name": "Mauritius",
+    "symbol": "🇲🇺",
+    "currency": "MUR",
+    "25_year_inflation_avg": 6.5,
+    "source": "BoM"
+  },
+  {
+    "name": "Mexico",
+    "symbol": "🇲🇽",
+    "currency": "MXN",
+    "25_year_inflation_avg": 4.9,
+    "source": "Banxico"
+  },
+  {
+    "name": "Micronesia",
+    "symbol": "🇫🇲",
+    "currency": "USD",
+    "25_year_inflation_avg": 2.3,
+    "source": "IMF"
+  },
+  {
+    "name": "Moldova",
+    "symbol": "🇲🇩",
+    "currency": "MDL",
+    "25_year_inflation_avg": 9.8,
+    "source": "NBM"
+  },
+  {
+    "name": "Monaco",
+    "symbol": "🇲🇨",
+    "currency": "EUR",
+    "25_year_inflation_avg": 1.8,
+    "source": "IMF"
+  },
+  {
+    "name": "Mongolia",
+    "symbol": "🇲🇳",
+    "currency": "MNT",
+    "25_year_inflation_avg": 10.2,
+    "source": "BoM"
+  },
+  {
+    "name": "Montenegro",
+    "symbol": "🇲🇪",
+    "currency": "EUR",
+    "25_year_inflation_avg": 4.2,
+    "source": "Monstat"
+  },
+  {
+    "name": "Morocco",
+    "symbol": "🇲🇦",
+    "currency": "MAD",
+    "25_year_inflation_avg": 2.3,
+    "source": "BAM"
+  },
+  {
+    "name": "Mozambique",
+    "symbol": "🇲🇿",
+    "currency": "MZN",
+    "25_year_inflation_avg": 11.5,
+    "source": "BM"
+  },
+  {
+    "name": "Myanmar",
+    "symbol": "🇲🇲",
+    "currency": "MMK",
+    "25_year_inflation_avg": 12.8,
+    "source": "CBM"
+  },
+  {
+    "name": "Namibia",
+    "symbol": "🇳🇦",
+    "currency": "NAD",
+    "25_year_inflation_avg": 6.2,
+    "source": "BoN"
+  },
+  {
+    "name": "Nauru",
+    "symbol": "🇳🇷",
+    "currency": "AUD",
+    "25_year_inflation_avg": 2.4,
+    "source": "IMF"
+  },
+  {
+    "name": "Nepal",
+    "symbol": "🇳🇵",
+    "currency": "NPR",
+    "25_year_inflation_avg": 7.5,
+    "source": "NRB"
+  },
+  {
+    "name": "Netherlands",
+    "symbol": "🇳🇱",
+    "currency": "EUR",
+    "25_year_inflation_avg": 2.0,
+    "source": "Eurostat"
+  },
+  {
+    "name": "New Zealand",
+    "symbol": "🇳🇿",
+    "currency": "NZD",
+    "25_year_inflation_avg": 2.3,
+    "source": "Stats NZ"
+  },
+  {
+    "name": "Nicaragua",
+    "symbol": "🇳🇮",
+    "currency": "NIO",
+    "25_year_inflation_avg": 7.8,
+    "source": "BCN"
+  },
+  {
+    "name": "Niger",
+    "symbol": "🇳🇪",
+    "currency": "XOF",
+    "25_year_inflation_avg": 2.9,
+    "source": "BCEAO"
+  },
+  {
+    "name": "Nigeria",
+    "symbol": "🇳🇬",
+    "currency": "NGN",
+    "25_year_inflation_avg": 12.6,
+    "source": "CBN"
+  },
+  {
+    "name": "North Macedonia",
+    "symbol": "🇲🇰",
+    "currency": "MKD",
+    "25_year_inflation_avg": 4.8,
+    "source": "NBRM"
+  },
+  {
+    "name": "Norway",
+    "symbol": "🇳🇴",
+    "currency": "NOK",
+    "25_year_inflation_avg": 2.1,
+    "source": "SSB"
+  },
+  {
+    "name": "Oman",
+    "symbol": "🇴🇲",
+    "currency": "OMR",
+    "25_year_inflation_avg": 2.4,
+    "source": "CBO"
+  },
+  {
+    "name": "Pakistan",
+    "symbol": "🇵🇰",
+    "currency": "PKR",
+    "25_year_inflation_avg": 9.8,
+    "source": "SBP"
+  },
+  {
+    "name": "Palau",
+    "symbol": "🇵🇼",
+    "currency": "USD",
+    "25_year_inflation_avg": 2.5,
+    "source": "IMF"
+  },
+  {
+    "name": "Panama",
+    "symbol": "🇵🇦",
+    "currency": "USD",
+    "25_year_inflation_avg": 2.3,
+    "source": "BCRP"
+  },
+  {
+    "name": "Papua New Guinea",
+    "symbol": "🇵🇬",
+    "currency": "PGK",
+    "25_year_inflation_avg": 6.5,
+    "source": "BoPNG"
+  },
+  {
+    "name": "Paraguay",
+    "symbol": "🇵🇾",
+    "currency": "PYG",
+    "25_year_inflation_avg": 7.2,
+    "source": "BCP"
+  },
+  {
+    "name": "Peru",
+    "symbol": "🇵🇪",
+    "currency": "PEN",
+    "25_year_inflation_avg": 3.8,
+    "source": "BCRP"
+  },
+  {
+    "name": "Philippines",
+    "symbol": "🇵🇭",
+    "currency": "PHP",
+    "25_year_inflation_avg": 5.2,
+    "source": "BSP"
+  },
+  {
+    "name": "Poland",
+    "symbol": "🇵🇱",
+    "currency": "PLN",
+    "25_year_inflation_avg": 4.2,
+    "source": "NBP"
+  },
+  {
+    "name": "Portugal",
+    "symbol": "🇵🇹",
+    "currency": "EUR",
+    "25_year_inflation_avg": 2.3,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Qatar",
+    "symbol": "🇶🇦",
+    "currency": "QAR",
+    "25_year_inflation_avg": 2.8,
+    "source": "QCB"
+  },
+  {
+    "name": "Romania",
+    "symbol": "🇷🇴",
+    "currency": "RON",
+    "25_year_inflation_avg": 7.8,
+    "source": "INS"
+  },
+  {
+    "name": "Russia",
+    "symbol": "🇷🇺",
+    "currency": "RUB",
+    "25_year_inflation_avg": 9.4,
+    "source": "CBR"
+  },
+  {
+    "name": "Rwanda",
+    "symbol": "🇷🇼",
+    "currency": "RWF",
+    "25_year_inflation_avg": 7.5,
+    "source": "BNR"
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "symbol": "🇰🇳",
+    "currency": "XCD",
+    "25_year_inflation_avg": 2.5,
+    "source": "ECCB"
+  },
+  {
+    "name": "Saint Lucia",
+    "symbol": "🇱🇨",
+    "currency": "XCD",
+    "25_year_inflation_avg": 2.7,
+    "source": "ECCB"
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "symbol": "🇻🇨",
+    "currency": "XCD",
+    "25_year_inflation_avg": 2.6,
+    "source": "ECCB"
+  },
+  {
+    "name": "Samoa",
+    "symbol": "🇼🇸",
+    "currency": "WST",
+    "25_year_inflation_avg": 4.8,
+    "source": "CBS"
+  },
+  {
+    "name": "San Marino",
+    "symbol": "🇸🇲",
+    "currency": "EUR",
+    "25_year_inflation_avg": 2.1,
+    "source": "IMF"
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "symbol": "🇸🇹",
+    "currency": "STN",
+    "25_year_inflation_avg": 11.2,
+    "source": "BCSTP"
+  },
+  {
+    "name": "Saudi Arabia",
+    "symbol": "🇸🇦",
+    "currency": "SAR",
+    "25_year_inflation_avg": 2.5,
+    "source": "SAMA"
+  },
+  {
+    "name": "Senegal",
+    "symbol": "🇸🇳",
+    "currency": "XOF",
+    "25_year_inflation_avg": 2.8,
+    "source": "BCEAO"
+  },
+  {
+    "name": "Serbia",
+    "symbol": "🇷🇸",
+    "currency": "RSD",
+    "25_year_inflation_avg": 8.9,
+    "source": "NBS"
+  },
+  {
+    "name": "Seychelles",
+    "symbol": "🇸🇨",
+    "currency": "SCR",
+    "25_year_inflation_avg": 6.5,
+    "source": "CBS"
+  },
+  {
+    "name": "Sierra Leone",
+    "symbol": "🇸🇱",
+    "currency": "SLL",
+    "25_year_inflation_avg": 15.8,
+    "source": "BoS"
+  },
+  {
+    "name": "Singapore",
+    "symbol": "🇸🇬",
+    "currency": "SGD",
+    "25_year_inflation_avg": 2.1,
+    "source": "MAS"
+  },
+  {
+    "name": "Slovakia",
+    "symbol": "🇸🇰",
+    "currency": "EUR",
+    "25_year_inflation_avg": 3.5,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Slovenia",
+    "symbol": "🇸🇮",
+    "currency": "EUR",
+    "25_year_inflation_avg": 2.8,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Solomon Islands",
+    "symbol": "🇸🇧",
+    "currency": "SBD",
+    "25_year_inflation_avg": 5.8,
+    "source": "CBSI"
+  },
+  {
+    "name": "Somalia",
+    "symbol": "🇸🇴",
+    "currency": "SOS",
+    "25_year_inflation_avg": 9.5,
+    "source": "CBS"
+  },
+  {
+    "name": "South Africa",
+    "symbol": "🇿🇦",
+    "currency": "ZAR",
+    "25_year_inflation_avg": 5.7,
+    "source": "SARB"
+  },
+  {
+    "name": "South Sudan",
+    "symbol": "🇸🇸",
+    "currency": "SSP",
+    "25_year_inflation_avg": 28.9,
+    "source": "BoSS"
+  },
+  {
+    "name": "Spain",
+    "symbol": "🇪🇸",
+    "currency": "EUR",
+    "25_year_inflation_avg": 2.4,
+    "source": "Eurostat"
+  },
+  {
+    "name": "Sri Lanka",
+    "symbol": "🇱🇰",
+    "currency": "LKR",
+    "25_year_inflation_avg": 9.8,
+    "source": "CBSL"
+  },
+  {
+    "name": "Sudan",
+    "symbol": "🇸🇩",
+    "currency": "SDG",
+    "25_year_inflation_avg": 45.2,
+    "source": "CBoS"
+  },
+  {
+    "name": "Suriname",
+    "symbol": "🇸🇷",
+    "currency": "SRD",
+    "25_year_inflation_avg": 22.5,
+    "source": "CBvS"
+  },
+  {
+    "name": "Sweden",
+    "symbol": "🇸🇪",
+    "currency": "SEK",
+    "25_year_inflation_avg": 1.8,
+    "source": "SCB"
+  },
+  {
+    "name": "Switzerland",
+    "symbol": "🇨🇭",
+    "currency": "CHF",
+    "25_year_inflation_avg": 0.8,
+    "source": "FSO"
+  },
+  {
+    "name": "Syria",
+    "symbol": "🇸🇾",
+    "currency": "SYP",
+    "25_year_inflation_avg": 35.8,
+    "source": "CBS"
+  },
+  {
+    "name": "Taiwan",
+    "symbol": "🇹🇼",
+    "currency": "TWD",
+    "25_year_inflation_avg": 1.2,
+    "source": "DGBAS"
+  },
+  {
+    "name": "Tajikistan",
+    "symbol": "🇹🇯",
+    "currency": "TJS",
+    "25_year_inflation_avg": 10.5,
+    "source": "NBT"
+  },
+  {
+    "name": "Tanzania",
+    "symbol": "🇹🇿",
+    "currency": "TZS",
+    "25_year_inflation_avg": 7.8,
+    "source": "BoT"
+  },
+  {
+    "name": "Thailand",
+    "symbol": "🇹🇭",
+    "currency": "THB",
+    "25_year_inflation_avg": 2.5,
+    "source": "BoT"
+  },
+  {
+    "name": "Togo",
+    "symbol": "🇹🇬",
+    "currency": "XOF",
+    "25_year_inflation_avg": 3.2,
+    "source": "BCEAO"
+  },
+  {
+    "name": "Tonga",
+    "symbol": "🇹🇴",
+    "currency": "TOP",
+    "25_year_inflation_avg": 6.5,
+    "source": "NRBT"
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "symbol": "🇹🇹",
+    "currency": "TTD",
+    "25_year_inflation_avg": 5.8,
+    "source": "CBTT"
+  },
+  {
+    "name": "Tunisia",
+    "symbol": "🇹🇳",
+    "currency": "TND",
+    "25_year_inflation_avg": 5.2,
+    "source": "INS"
+  },
+  {
+    "name": "Turkey",
+    "symbol": "🇹🇷",
+    "currency": "TRY",
+    "25_year_inflation_avg": 25.3,
+    "source": "TUIK"
+  },
+  {
+    "name": "Turkmenistan",
+    "symbol": "🇹🇲",
+    "currency": "TMT",
+    "25_year_inflation_avg": null,
+    "source": "No reliable data"
+  },
+  {
+    "name": "Tuvalu",
+    "symbol": "🇹🇻",
+    "currency": "AUD",
+    "25_year_inflation_avg": 2.5,
+    "source": "IMF"
+  },
+  {
+    "name": "Uganda",
+    "symbol": "🇺🇬",
+    "currency": "UGX",
+    "25_year_inflation_avg": 8.5,
+    "source": "BoU"
+  },
+  {
+    "name": "Ukraine",
+    "symbol": "🇺🇦",
+    "currency": "UAH",
+    "25_year_inflation_avg": 12.8,
+    "source": "NBU"
+  },
+  {
+    "name": "United Arab Emirates",
+    "symbol": "🇦🇪",
+    "currency": "AED",
+    "25_year_inflation_avg": 2.5,
+    "source": "CBUAE"
+  },
+  {
+    "name": "United Kingdom",
+    "symbol": "🇬🇧",
+    "currency": "GBP",
+    "25_year_inflation_avg": 2.2,
+    "source": "ONS"
+  },
+  {
+    "name": "United States",
+    "symbol": "🇺🇸",
+    "currency": "USD",
+    "25_year_inflation_avg": 2.3,
+    "source": "BLS"
+  },
+  {
+    "name": "Uruguay",
+    "symbol": "🇺🇾",
+    "currency": "UYU",
+    "25_year_inflation_avg": 8.5,
+    "source": "BCU"
+  },
+  {
+    "name": "Uzbekistan",
+    "symbol": "🇺🇿",
+    "currency": "UZS",
+    "25_year_inflation_avg": 12.5,
+    "source": "CBU"
+  },
+  {
+    "name": "Vanuatu",
+    "symbol": "🇻🇺",
+    "currency": "VUV",
+    "25_year_inflation_avg": 3.8,
+    "source": "RBV"
+  },
+  {
+    "name": "Vatican City",
+    "symbol": "🇻🇦",
+    "currency": "EUR",
+    "25_year_inflation_avg": 1.9,
+    "source": "IMF"
+  },
+  {
+    "name": "Venezuela",
+    "symbol": "🇻🇪",
+    "currency": "VES",
+    "25_year_inflation_avg": 320.5,
+    "source": "BCV"
+  },
+  {
+    "name": "Vietnam",
+    "symbol": "🇻🇳",
+    "currency": "VND",
+    "25_year_inflation_avg": 6.5,
+    "source": "GSO"
+  },
+  {
+    "name": "Yemen",
+    "symbol": "🇾🇪",
+    "currency": "YER",
+    "25_year_inflation_avg": 22.8,
+    "source": "CBY"
+  },
+  {
+    "name": "Zambia",
+    "symbol": "🇿🇲",
+    "currency": "ZMW",
+    "25_year_inflation_avg": 15.2,
+    "source": "BoZ"
+  },
+  {
+    "name": "Zimbabwe",
+    "symbol": "🇿🇼",
+    "currency": "ZWL",
+    "25_year_inflation_avg": 85.2,
+    "source": "ZimStat"
+  }
+]

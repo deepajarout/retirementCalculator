@@ -34,40 +34,58 @@
 <div class="container calculator-tab"  id="calculator">
      <div class="form-container">
             <h2 class="text-xl font-bold text-blue-600">Enter Your Details</h2>
-            <form action="/" method="POST">
+            <form class="mt-4" action="/" method="POST">
+            {{#if errorMessage}} 
+                <div id="requiredSavingsResult" class="result mt-4 font-bold text-red-700">{{errorMessage}}</div>
+                {{/if}}
+                {{#if errorMessage}}
+  <div class="error-message" style="color: red; font-weight: bold;">
+    {{errorMessage}}
+  </div>
+{{/if}}
+                <label for="country">Select Your Country (Auto-fills inflation rate): </label>
+                <select id="country" name="country"  class="w-full border border-gray-300 rounded px-3 py-3 mb-2 mt-2"  size="2">
+                  {{#each country}}
+                <option value={{this.name}} data-currency={{this.currency}} data-inflation={{this.25_year_inflation_avg}} onclick="updateCountryDetails()">{{this.symbol}} {{this.name}}</option>
+                  {{/each}}
+                </select>
+                 
+                <input type="text" id="currency" name="currency" step="0.01" hidden>
                 <label for="initialAmount">Initial Savings:</label>
-                <input type="number" id="initialAmount" name="initialAmount" required step="0.01">
+                <input type="number" id="initialAmount" name="initialAmount" required step="0.01" value="{{#if initialAmount}}{{initialAmount}}{{/if}}">
     
                 <label for="monthlyContribution">Monthly Contribution:</label>
-                <input type="number" id="monthlyContribution" name="monthlyContribution" required step="0.01">
+                <input type="number" id="monthlyContribution" name="monthlyContribution" required step="0.01" value="{{#if monthlyContribution}}{{monthlyContribution}}{{/if}}">
                 
                 <label for="percentageIncreaseMonthlyContribution">Percentage % Increase In Monthly Contribution :</label>
-                <input type="number" id="percentageIncreaseMonthlyContribution" name="percentageIncreaseMonthlyContribution" required step="0.01" value="0">
+                <input type="number" id="percentageIncreaseMonthlyContribution" name="percentageIncreaseMonthlyContribution" required step="0.01" value="{{#if percentageIncreaseMonthlyContribution}}{{percentageIncreaseMonthlyContribution}}{{/if}}">
     
                 <label for="interestRate">Interest Rate (% per annum):</label>
-                <input type="number" id="interestRate" name="interestRate" required step="0.01">
+                <input type="number" id="interestRate" name="interestRate" required step="0.01" value="{{#if interestRate}}{{interestRate}}{{/if}}">
     
                 <label for="inflationRate">Inflation Rate (% per annum):</label>
-                <input type="number" id="inflationRate" name="inflationRate" required step="0.01">
+                <input type="number" id="inflationRate" name="inflationRate" required step="0.01" value="{{#if inflationRate}}{{inflationRate}}{{/if}}">
     
                 <label for="currentAge">Current Age:</label>
-                <input type="number" id="currentAge" name="currentAge" required>
+                <input type="number" id="currentAge" name="currentAge" required value="{{#if currentAge}}{{currentAge}}{{/if}}">
     
                 <label for="retirementAge">Retirement Age:</label>
-                <input type="number" id="retirementAge" name="retirementAge" required>
+                <input type="number" id="retirementAge" name="retirementAge" required value="{{#if retirementAge}}{{retirementAge}}{{/if}}">
     
                 <label for="monthlyWithdrawal">Monthly Withdrawal After Retirement:</label>
-                <input type="number" id="monthlyWithdrawal" name="monthlyWithdrawal" required step="0.01">
+                <input type="number" id="monthlyWithdrawal" name="monthlyWithdrawal" required step="0.01" value="{{#if monthlyWithdrawal}}{{monthlyWithdrawal}}{{/if}}">
                 
                 <button type="submit" class="w-full mt-4">Calculate</button>
             </form>
         </div>
     {{#if results}}
+
         <div class="results-container">
-               
             <h2 class="text-xl font-bold text-blue-600">Results</h2>
             <canvas id="retirementChart"></canvas>
-            <table class="w-full mt-4 border-collapse border border-gray-300">
+                <div class="table-wrapper">
+
+            <table class="results-table w-full mt-4 border-collapse border border-gray-300">
                 <thead>
                     <tr class="bg-gray-200">
                         <th class="border border-gray-300 p-2">Age</th>
@@ -80,13 +98,14 @@
                         {{#each results}}
                 <tr>
                     <td>{{this.age}}</td>
-                    <td>${{this.totalInvested}}</td>
-                    <td>${{this.totalSavings}}</td>
-                    <td>${{this.withdrawal}}</td>
+                    <td>{{this.currency}} {{this.totalInvested}}</td>
+                    <td>{{this.currency}} {{this.totalSavings}}</td>
+                    <td>{{this.currency}} {{this.withdrawal}}</td>
                 </tr>
                 {{/each}}
                 </tbody>
             </table>
+       </div>
              
         </div>
              {{/if}}
@@ -118,6 +137,16 @@
 
 <!-- JS -->
 <script>
+  function updateCountryDetails() {
+  const select = document.getElementById("country");
+  const selectedOption = select.options[select.selectedIndex];
+  const inflation = selectedOption.getAttribute("data-inflation");
+    const currency = selectedOption.getAttribute("data-currency");
+  // Fill the inputs if data exists
+  document.getElementById("inflationRate").value = inflation || '';
+   document.getElementById("currency").value = currency || '';
+
+}
   function showTab(tabId) {
     const tabs = document.querySelectorAll('.calculator-tab');
     const buttons = document.querySelectorAll('.tab-button');
@@ -184,7 +213,7 @@ function calculateRequiredSavings(e) {
   .tab-button {
     padding: 10px 20px;
     border: 1px solid #ccc;
-    background: #eee;
+    background: #4dd5c7;
     cursor: pointer;
     border-radius: 5px;
   }
@@ -257,7 +286,7 @@ function calculateRequiredSavings(e) {
       return;
     }
 
-    const subject = encodeURIComponent("User Feedback");
+    const subject = encodeURIComponent("results Feedback");
     const body = encodeURIComponent(feedback);
     const email = "dj.jarout@gmail.com"; // Replace with your email address
 

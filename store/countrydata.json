@@ -1,0 +1,1360 @@
+[
+  {
+    "name": "Afghanistan",
+    "symbol": "🇦🇫",
+    "currency": "AFN",
+    "inflation_rate": 5.0,
+    "source": "World Bank (2023 est.)"
+  },
+  {
+    "name": "Albania",
+    "symbol": "🇦🇱",
+    "currency": "ALL",
+    "inflation_rate": 4.2,
+    "source": "IMF (2024)"
+  },
+  {
+    "name": "Algeria",
+    "symbol": "🇩🇿",
+    "currency": "DZD",
+    "inflation_rate": 9.3,
+    "source": "CIA Factbook (2023)"
+  },
+  {
+    "name": "Andorra",
+    "symbol": "🇦🇩",
+    "currency": "EUR",
+    "inflation_rate": 2.1,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Angola",
+    "symbol": "🇦🇴",
+    "currency": "AOA",
+    "inflation_rate": 18.5,
+    "source": "World Bank (2023)"
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "symbol": "🇦🇬",
+    "currency": "XCD",
+    "inflation_rate": 3.8,
+    "source": "ECCB (2024)"
+  },
+  {
+    "name": "Argentina",
+    "symbol": "🇦🇷",
+    "currency": "ARS",
+    "inflation_rate": 211.4,
+    "source": "INDEC (2024)"
+  },
+  {
+    "name": "Armenia",
+    "symbol": "🇦🇲",
+    "currency": "AMD",
+    "inflation_rate": 8.6,
+    "source": "CBR (2024)"
+  },
+  {
+    "name": "Australia",
+    "symbol": "🇦🇺",
+    "currency": "AUD",
+    "inflation_rate": 3.4,
+    "source": "ABS (2024)"
+  },
+  {
+    "name": "Austria",
+    "symbol": "🇦🇹",
+    "currency": "EUR",
+    "inflation_rate": 3.0,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Azerbaijan",
+    "symbol": "🇦🇿",
+    "currency": "AZN",
+    "inflation_rate": 12.5,
+    "source": "CBA (2024)"
+  },
+  {
+    "name": "Bahamas",
+    "symbol": "🇧🇸",
+    "currency": "BSD",
+    "inflation_rate": 2.3,
+    "source": "CBOB (2024)"
+  },
+  {
+    "name": "Bahrain",
+    "symbol": "🇧🇭",
+    "currency": "BHD",
+    "inflation_rate": 1.8,
+    "source": "CBB (2024)"
+  },
+  {
+    "name": "Bangladesh",
+    "symbol": "🇧🇩",
+    "currency": "BDT",
+    "inflation_rate": 9.7,
+    "source": "BB (2024)"
+  },
+  {
+    "name": "Barbados",
+    "symbol": "🇧🇧",
+    "currency": "BBD",
+    "inflation_rate": 4.1,
+    "source": "CBB (2024)"
+  },
+  {
+    "name": "Belarus",
+    "symbol": "🇧🇾",
+    "currency": "BYN",
+    "inflation_rate": 7.4,
+    "source": "NBRB (2024)"
+  },
+  {
+    "name": "Belgium",
+    "symbol": "🇧🇪",
+    "currency": "EUR",
+    "inflation_rate": 3.2,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Belize",
+    "symbol": "🇧🇿",
+    "currency": "BZD",
+    "inflation_rate": 3.9,
+    "source": "CBB (2024)"
+  },
+  {
+    "name": "Benin",
+    "symbol": "🇧🇯",
+    "currency": "XOF",
+    "inflation_rate": 6.5,
+    "source": "BCEAO (2024)"
+  },
+  {
+    "name": "Bhutan",
+    "symbol": "🇧🇹",
+    "currency": "BTN",
+    "inflation_rate": 5.2,
+    "source": "RMA (2024)"
+  },
+  {
+    "name": "Bolivia",
+    "symbol": "🇧🇴",
+    "currency": "BOB",
+    "inflation_rate": 3.1,
+    "source": "INE (2024)"
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "symbol": "🇧🇦",
+    "currency": "BAM",
+    "inflation_rate": 4.8,
+    "source": "CBBH (2024)"
+  },
+  {
+    "name": "Botswana",
+    "symbol": "🇧🇼",
+    "currency": "BWP",
+    "inflation_rate": 6.3,
+    "source": "BoB (2024)"
+  },
+  {
+    "name": "Brazil",
+    "symbol": "🇧🇷",
+    "currency": "BRL",
+    "inflation_rate": 4.5,
+    "source": "BCB (2024)"
+  },
+  {
+    "name": "Brunei",
+    "symbol": "🇧🇳",
+    "currency": "BND",
+    "inflation_rate": 1.2,
+    "source": "JPKE (2024)"
+  },
+  {
+    "name": "Bulgaria",
+    "symbol": "🇧🇬",
+    "currency": "BGN",
+    "inflation_rate": 5.0,
+    "source": "NSI (2024)"
+  },
+  {
+    "name": "Burkina Faso",
+    "symbol": "🇧🇫",
+    "currency": "XOF",
+    "inflation_rate": 7.8,
+    "source": "BCEAO (2024)"
+  },
+  {
+    "name": "Burundi",
+    "symbol": "🇧🇮",
+    "currency": "BIF",
+    "inflation_rate": 20.3,
+    "source": "BRB (2024)"
+  },
+  {
+    "name": "Cambodia",
+    "symbol": "🇰🇭",
+    "currency": "KHR",
+    "inflation_rate": 4.9,
+    "source": "NBC (2024)"
+  },
+  {
+    "name": "Cameroon",
+    "symbol": "🇨🇲",
+    "currency": "XAF",
+    "inflation_rate": 6.7,
+    "source": "BEAC (2024)"
+  },
+  {
+    "name": "Canada",
+    "symbol": "🇨🇦",
+    "currency": "CAD",
+    "inflation_rate": 2.9,
+    "source": "StatCan (2024)"
+  },
+  {
+    "name": "Cape Verde",
+    "symbol": "🇨🇻",
+    "currency": "CVE",
+    "inflation_rate": 3.5,
+    "source": "BCV (2024)"
+  },
+  {
+    "name": "Central African Republic",
+    "symbol": "🇨🇫",
+    "currency": "XAF",
+    "inflation_rate": 8.2,
+    "source": "BEAC (2024)"
+  },
+  {
+    "name": "Chad",
+    "symbol": "🇹🇩",
+    "currency": "XAF",
+    "inflation_rate": 9.1,
+    "source": "BEAC (2024)"
+  },
+  {
+    "name": "Chile",
+    "symbol": "🇨🇱",
+    "currency": "CLP",
+    "inflation_rate": 6.5,
+    "source": "BCCh (2024)"
+  },
+  {
+    "name": "China",
+    "symbol": "🇨🇳",
+    "currency": "CNY",
+    "inflation_rate": 0.7,
+    "source": "NBS (2024)"
+  },
+  {
+    "name": "Colombia",
+    "symbol": "🇨🇴",
+    "currency": "COP",
+    "inflation_rate": 7.2,
+    "source": "BanRep (2024)"
+  },
+  {
+    "name": "Comoros",
+    "symbol": "🇰🇲",
+    "currency": "KMF",
+    "inflation_rate": 5.8,
+    "source": "BCRC (2024)"
+  },
+  {
+    "name": "Congo (DRC)",
+    "symbol": "🇨🇩",
+    "currency": "CDF",
+    "inflation_rate": 23.1,
+    "source": "BCC (2024)"
+  },
+  {
+    "name": "Congo (Republic)",
+    "symbol": "🇨🇬",
+    "currency": "XAF",
+    "inflation_rate": 7.4,
+    "source": "BEAC (2024)"
+  },
+  {
+    "name": "Costa Rica",
+    "symbol": "🇨🇷",
+    "currency": "CRC",
+    "inflation_rate": 5.3,
+    "source": "BCCR (2024)"
+  },
+  {
+    "name": "Croatia",
+    "symbol": "🇭🇷",
+    "currency": "EUR",
+    "inflation_rate": 4.0,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Cuba",
+    "symbol": "🇨🇺",
+    "currency": "CUP",
+    "inflation_rate": 45.0,
+    "source": "ONEI (2024)"
+  },
+  {
+    "name": "Cyprus",
+    "symbol": "🇨🇾",
+    "currency": "EUR",
+    "inflation_rate": 3.1,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Czech Republic",
+    "symbol": "🇨🇿",
+    "currency": "CZK",
+    "inflation_rate": 6.0,
+    "source": "CNB (2024)"
+  },
+  {
+    "name": "Denmark",
+    "symbol": "🇩🇰",
+    "currency": "DKK",
+    "inflation_rate": 2.7,
+    "source": "DST (2024)"
+  },
+  {
+    "name": "Djibouti",
+    "symbol": "🇩🇯",
+    "currency": "DJF",
+    "inflation_rate": 4.5,
+    "source": "BSD (2024)"
+  },
+  {
+    "name": "Dominica",
+    "symbol": "🇩🇲",
+    "currency": "XCD",
+    "inflation_rate": 3.2,
+    "source": "ECCB (2024)"
+  },
+  {
+    "name": "Dominican Republic",
+    "symbol": "🇩🇴",
+    "currency": "DOP",
+    "inflation_rate": 5.8,
+    "source": "BCRD (2024)"
+  },
+  {
+    "name": "Ecuador",
+    "symbol": "🇪🇨",
+    "currency": "USD",
+    "inflation_rate": 2.4,
+    "source": "ECB (2024)"
+  },
+  {
+    "name": "Egypt",
+    "symbol": "🇪🇬",
+    "currency": "EGP",
+    "inflation_rate": 32.5,
+    "source": "CBE (2024)"
+  },
+  {
+    "name": "El Salvador",
+    "symbol": "🇸🇻",
+    "currency": "USD",
+    "inflation_rate": 3.0,
+    "source": "BCR (2024)"
+  },
+  {
+    "name": "Equatorial Guinea",
+    "symbol": "🇬🇶",
+    "currency": "XAF",
+    "inflation_rate": 6.9,
+    "source": "BEAC (2024)"
+  },
+  {
+    "name": "Eritrea",
+    "symbol": "🇪🇷",
+    "currency": "ERN",
+    "inflation_rate": 15.0,
+    "source": "BoE (2024)"
+  },
+  {
+    "name": "Estonia",
+    "symbol": "🇪🇪",
+    "currency": "EUR",
+    "inflation_rate": 4.8,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Eswatini",
+    "symbol": "🇸🇿",
+    "currency": "SZL",
+    "inflation_rate": 5.6,
+    "source": "CBS (2024)"
+  },
+  {
+    "name": "Ethiopia",
+    "symbol": "🇪🇹",
+    "currency": "ETB",
+    "inflation_rate": 28.3,
+    "source": "NBE (2024)"
+  },
+  {
+    "name": "Fiji",
+    "symbol": "🇫🇯",
+    "currency": "FJD",
+    "inflation_rate": 4.5,
+    "source": "RBF (2024)"
+  },
+  {
+    "name": "Finland",
+    "symbol": "🇫🇮",
+    "currency": "EUR",
+    "inflation_rate": 2.9,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "France",
+    "symbol": "🇫🇷",
+    "currency": "EUR",
+    "inflation_rate": 3.3,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Gabon",
+    "symbol": "🇬🇦",
+    "currency": "XAF",
+    "inflation_rate": 7.2,
+    "source": "BEAC (2024)"
+  },
+  {
+    "name": "Gambia",
+    "symbol": "🇬🇲",
+    "currency": "GMD",
+    "inflation_rate": 18.5,
+    "source": "CBG (2024)"
+  },
+  {
+    "name": "Georgia",
+    "symbol": "🇬🇪",
+    "currency": "GEL",
+    "inflation_rate": 8.9,
+    "source": "NBG (2024)"
+  },
+  {
+    "name": "Germany",
+    "symbol": "🇩🇪",
+    "currency": "EUR",
+    "inflation_rate": 3.2,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Ghana",
+    "symbol": "🇬🇭",
+    "currency": "GHS",
+    "inflation_rate": 23.2,
+    "source": "BoG (2024)"
+  },
+  {
+    "name": "Greece",
+    "symbol": "🇬🇷",
+    "currency": "EUR",
+    "inflation_rate": 4.1,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Grenada",
+    "symbol": "🇬🇩",
+    "currency": "XCD",
+    "inflation_rate": 3.6,
+    "source": "ECCB (2024)"
+  },
+  {
+    "name": "Guatemala",
+    "symbol": "🇬🇹",
+    "currency": "GTQ",
+    "inflation_rate": 5.9,
+    "source": "BANGUAT (2024)"
+  },
+  {
+    "name": "Guinea",
+    "symbol": "🇬🇳",
+    "currency": "GNF",
+    "inflation_rate": 12.8,
+    "source": "BCRG (2024)"
+  },
+  {
+    "name": "Guinea-Bissau",
+    "symbol": "🇬🇼",
+    "currency": "XOF",
+    "inflation_rate": 7.4,
+    "source": "BCEAO (2024)"
+  },
+  {
+    "name": "Guyana",
+    "symbol": "🇬🇾",
+    "currency": "GYD",
+    "inflation_rate": 6.2,
+    "source": "BoG (2024)"
+  },
+  {
+    "name": "Haiti",
+    "symbol": "🇭🇹",
+    "currency": "HTG",
+    "inflation_rate": 47.2,
+    "source": "BRH (2024)"
+  },
+  {
+    "name": "Honduras",
+    "symbol": "🇭🇳",
+    "currency": "HNL",
+    "inflation_rate": 8.7,
+    "source": "BCH (2024)"
+  },
+  {
+    "name": "Hungary",
+    "symbol": "🇭🇺",
+    "currency": "HUF",
+    "inflation_rate": 5.8,
+    "source": "MNB (2024)"
+  },
+  {
+    "name": "Iceland",
+    "symbol": "🇮🇸",
+    "currency": "ISK",
+    "inflation_rate": 6.3,
+    "source": "CBI (2024)"
+  },
+  {
+    "name": "India",
+    "symbol": "🇮🇳",
+    "currency": "INR",
+    "inflation_rate": 5.5,
+    "source": "RBI (2024)"
+  },
+  {
+    "name": "Indonesia",
+    "symbol": "🇮🇩",
+    "currency": "IDR",
+    "inflation_rate": 4.9,
+    "source": "BI (2024)"
+  },
+  {
+    "name": "Iran",
+    "symbol": "🇮🇷",
+    "currency": "IRR",
+    "inflation_rate": 40.3,
+    "source": "CBI (2024)"
+  },
+  {
+    "name": "Iraq",
+    "symbol": "🇮🇶",
+    "currency": "IQD",
+    "inflation_rate": 5.7,
+    "source": "CBI (2024)"
+  },
+  {
+    "name": "Ireland",
+    "symbol": "🇮🇪",
+    "currency": "EUR",
+    "inflation_rate": 3.0,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Israel",
+    "symbol": "🇮🇱",
+    "currency": "ILS",
+    "inflation_rate": 3.2,
+    "source": "CBS (2024)"
+  },
+  {
+    "name": "Italy",
+    "symbol": "🇮🇹",
+    "currency": "EUR",
+    "inflation_rate": 3.5,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Jamaica",
+    "symbol": "🇯🇲",
+    "currency": "JMD",
+    "inflation_rate": 6.8,
+    "source": "BOJ (2024)"
+  },
+  {
+    "name": "Japan",
+    "symbol": "🇯🇵",
+    "currency": "JPY",
+    "inflation_rate": 2.8,
+    "source": "BoJ (2024)"
+  },
+  {
+    "name": "Jordan",
+    "symbol": "🇯🇴",
+    "currency": "JOD",
+    "inflation_rate": 2.6,
+    "source": "CBJ (2024)"
+  },
+  {
+    "name": "Kazakhstan",
+    "symbol": "🇰🇿",
+    "currency": "KZT",
+    "inflation_rate": 9.8,
+    "source": "NBK (2024)"
+  },
+  {
+    "name": "Kenya",
+    "symbol": "🇰🇪",
+    "currency": "KES",
+    "inflation_rate": 6.9,
+    "source": "CBK (2024)"
+  },
+  {
+    "name": "Kiribati",
+    "symbol": "🇰🇮",
+    "currency": "AUD",
+    "inflation_rate": 3.1,
+    "source": "IMF (2024)"
+  },
+  {
+    "name": "Korea (North)",
+    "symbol": "🇰🇵",
+    "currency": "KPW",
+    "inflation_rate": "N/A",
+    "source": "No reliable data"
+  },
+  {
+    "name": "Korea (South)",
+    "symbol": "🇰🇷",
+    "currency": "KRW",
+    "inflation_rate": 3.4,
+    "source": "BoK (2024)"
+  },
+  {
+    "name": "Kosovo",
+    "symbol": "🇽🇰",
+    "currency": "EUR",
+    "inflation_rate": 4.2,
+    "source": "ASK (2024)"
+  },
+  {
+    "name": "Kuwait",
+    "symbol": "🇰🇼",
+    "currency": "KWD",
+    "inflation_rate": 3.0,
+    "source": "CBK (2024)"
+  },
+  {
+    "name": "Kyrgyzstan",
+    "symbol": "🇰🇬",
+    "currency": "KGS",
+    "inflation_rate": 10.5,
+    "source": "NBKR (2024)"
+  },
+  {
+    "name": "Laos",
+    "symbol": "🇱🇦",
+    "currency": "LAK",
+    "inflation_rate": 25.0,
+    "source": "BoL (2024)"
+  },
+  {
+    "name": "Latvia",
+    "symbol": "🇱🇻",
+    "currency": "EUR",
+    "inflation_rate": 4.5,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Lebanon",
+    "symbol": "🇱🇧",
+    "currency": "LBP",
+    "inflation_rate": 230.0,
+    "source": "CAS (2024)"
+  },
+  {
+    "name": "Lesotho",
+    "symbol": "🇱🇸",
+    "currency": "LSL",
+    "inflation_rate": 6.8,
+    "source": "CBL (2024)"
+  },
+  {
+    "name": "Liberia",
+    "symbol": "🇱🇷",
+    "currency": "LRD",
+    "inflation_rate": 10.2,
+    "source": "CBL (2024)"
+  },
+  {
+    "name": "Libya",
+    "symbol": "🇱🇾",
+    "currency": "LYD",
+    "inflation_rate": 12.3,
+    "source": "CBL (2024)"
+  },
+  {
+    "name": "Liechtenstein",
+    "symbol": "🇱🇮",
+    "currency": "CHF",
+    "inflation_rate": 1.8,
+    "source": "IMF (2024)"
+  },
+  {
+    "name": "Lithuania",
+    "symbol": "🇱🇹",
+    "currency": "EUR",
+    "inflation_rate": 4.3,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Luxembourg",
+    "symbol": "🇱🇺",
+    "currency": "EUR",
+    "inflation_rate": 3.1,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Madagascar",
+    "symbol": "🇲🇬",
+    "currency": "MGA",
+    "inflation_rate": 8.6,
+    "source": "BFM (2024)"
+  },
+  {
+    "name": "Malawi",
+    "symbol": "🇲🇼",
+    "currency": "MWK",
+    "inflation_rate": 28.6,
+    "source": "RBM (2024)"
+  },
+  {
+    "name": "Malaysia",
+    "symbol": "🇲🇾",
+    "currency": "MYR",
+    "inflation_rate": 3.0,
+    "source": "BNM (2024)"
+  },
+  {
+    "name": "Maldives",
+    "symbol": "🇲🇻",
+    "currency": "MVR",
+    "inflation_rate": 4.2,
+    "source": "MMA (2024)"
+  },
+  {
+    "name": "Mali",
+    "symbol": "🇲🇱",
+    "currency": "XOF",
+    "inflation_rate": 7.9,
+    "source": "BCEAO (2024)"
+  },
+  {
+    "name": "Malta",
+    "symbol": "🇲🇹",
+    "currency": "EUR",
+    "inflation_rate": 3.4,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Marshall Islands",
+    "symbol": "🇲🇭",
+    "currency": "USD",
+    "inflation_rate": 2.5,
+    "source": "IMF (2024)"
+  },
+  {
+    "name": "Mauritania",
+    "symbol": "🇲🇷",
+    "currency": "MRU",
+    "inflation_rate": 9.5,
+    "source": "BCM (2024)"
+  },
+  {
+    "name": "Mauritius",
+    "symbol": "🇲🇺",
+    "currency": "MUR",
+    "inflation_rate": 7.0,
+    "source": "BoM (2024)"
+  },
+  {
+    "name": "Mexico",
+    "symbol": "🇲🇽",
+    "currency": "MXN",
+    "inflation_rate": 6.8,
+    "source": "Banxico (2024)"
+  },
+  {
+    "name": "Micronesia",
+    "symbol": "🇫🇲",
+    "currency": "USD",
+    "inflation_rate": 2.8,
+    "source": "IMF (2024)"
+  },
+  {
+    "name": "Moldova",
+    "symbol": "🇲🇩",
+    "currency": "MDL",
+    "inflation_rate": 12.4,
+    "source": "NBM (2024)"
+  },
+  {
+    "name": "Monaco",
+    "symbol": "🇲🇨",
+    "currency": "EUR",
+    "inflation_rate": 2.9,
+    "source": "IMF (2024)"
+  },
+  {
+    "name": "Mongolia",
+    "symbol": "🇲🇳",
+    "currency": "MNT",
+    "inflation_rate": 8.2,
+    "source": "BoM (2024)"
+  },
+  {
+    "name": "Montenegro",
+    "symbol": "🇲🇪",
+    "currency": "EUR",
+    "inflation_rate": 5.1,
+    "source": "Monstat (2024)"
+  },
+  {
+    "name": "Morocco",
+    "symbol": "🇲🇦",
+    "currency": "MAD",
+    "inflation_rate": 5.3,
+    "source": "BAM (2024)"
+  },
+  {
+    "name": "Mozambique",
+    "symbol": "🇲🇿",
+    "currency": "MZN",
+    "inflation_rate": 10.4,
+    "source": "BM (2024)"
+  },
+  {
+    "name": "Myanmar",
+    "symbol": "🇲🇲",
+    "currency": "MMK",
+    "inflation_rate": 18.5,
+    "source": "CBM (2024)"
+  },
+  {
+    "name": "Namibia",
+    "symbol": "🇳🇦",
+    "currency": "NAD",
+    "inflation_rate": 6.0,
+    "source": "BoN (2024)"
+  },
+  {
+    "name": "Nauru",
+    "symbol": "🇳🇷",
+    "currency": "AUD",
+    "inflation_rate": 3.2,
+    "source": "IMF (2024)"
+  },
+  {
+    "name": "Nepal",
+    "symbol": "🇳🇵",
+    "currency": "NPR",
+    "inflation_rate": 7.8,
+    "source": "NRB (2024)"
+  },
+  {
+    "name": "Netherlands",
+    "symbol": "🇳🇱",
+    "currency": "EUR",
+    "inflation_rate": 3.6,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "New Zealand",
+    "symbol": "🇳🇿",
+    "currency": "NZD",
+    "inflation_rate": 4.7,
+    "source": "Stats NZ (2024)"
+  },
+  {
+    "name": "Nicaragua",
+    "symbol": "🇳🇮",
+    "currency": "NIO",
+    "inflation_rate": 6.5,
+    "source": "BCN (2024)"
+  },
+  {
+    "name": "Niger",
+    "symbol": "🇳🇪",
+    "currency": "XOF",
+    "inflation_rate": 8.3,
+    "source": "BCEAO (2024)"
+  },
+  {
+    "name": "Nigeria",
+    "symbol": "🇳🇬",
+    "currency": "NGN",
+    "inflation_rate": 28.0,
+    "source": "CBN (2024)"
+  },
+  {
+    "name": "North Macedonia",
+    "symbol": "🇲🇰",
+    "currency": "MKD",
+    "inflation_rate": 9.2,
+    "source": "NBRM (2024)"
+  },
+  {
+    "name": "Norway",
+    "symbol": "🇳🇴",
+    "currency": "NOK",
+    "inflation_rate": 4.1,
+    "source": "SSB (2024)"
+  },
+  {
+    "name": "Oman",
+    "symbol": "🇴🇲",
+    "currency": "OMR",
+    "inflation_rate": 2.3,
+    "source": "CBO (2024)"
+  },
+  {
+    "name": "Pakistan",
+    "symbol": "🇵🇰",
+    "currency": "PKR",
+    "inflation_rate": 29.7,
+    "source": "SBP (2024)"
+  },
+  {
+    "name": "Palau",
+    "symbol": "🇵🇼",
+    "currency": "USD",
+    "inflation_rate": 2.9,
+    "source": "IMF (2024)"
+  },
+  {
+    "name": "Panama",
+    "symbol": "🇵🇦",
+    "currency": "USD",
+    "inflation_rate": 2.1,
+    "source": "BCRP (2024)"
+  },
+  {
+    "name": "Papua New Guinea",
+    "symbol": "🇵🇬",
+    "currency": "PGK",
+    "inflation_rate": 6.3,
+    "source": "BoPNG (2024)"
+  },
+  {
+    "name": "Paraguay",
+    "symbol": "🇵🇾",
+    "currency": "PYG",
+    "inflation_rate": 5.2,
+    "source": "BCP (2024)"
+  },
+  {
+    "name": "Peru",
+    "symbol": "🇵🇪",
+    "currency": "PEN",
+    "inflation_rate": 5.6,
+    "source": "BCRP (2024)"
+  },
+  {
+    "name": "Philippines",
+    "symbol": "🇵🇭",
+    "currency": "PHP",
+    "inflation_rate": 6.1,
+    "source": "BSP (2024)"
+  },
+  {
+    "name": "Poland",
+    "symbol": "🇵🇱",
+    "currency": "PLN",
+    "inflation_rate": 5.4,
+    "source": "NBP (2024)"
+  },
+  {
+    "name": "Portugal",
+    "symbol": "🇵🇹",
+    "currency": "EUR",
+    "inflation_rate": 3.2,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Qatar",
+    "symbol": "🇶🇦",
+    "currency": "QAR",
+    "inflation_rate": 2.8,
+    "source": "QCB (2024)"
+  },
+  {
+    "name": "Romania",
+    "symbol": "🇷🇴",
+    "currency": "RON",
+    "inflation_rate": 7.6,
+    "source": "INS (2024)"
+  },
+  {
+    "name": "Russia",
+    "symbol": "🇷🇺",
+    "currency": "RUB",
+    "inflation_rate": 7.4,
+    "source": "CBR (2024)"
+  },
+  {
+    "name": "Rwanda",
+    "symbol": "🇷🇼",
+    "currency": "RWF",
+    "inflation_rate": 9.1,
+    "source": "BNR (2024)"
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "symbol": "🇰🇳",
+    "currency": "XCD",
+    "inflation_rate": 3.4,
+    "source": "ECCB (2024)"
+  },
+  {
+    "name": "Saint Lucia",
+    "symbol": "🇱🇨",
+    "currency": "XCD",
+    "inflation_rate": 3.7,
+    "source": "ECCB (2024)"
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "symbol": "🇻🇨",
+    "currency": "XCD",
+    "inflation_rate": 3.5,
+    "source": "ECCB (2024)"
+  },
+  {
+    "name": "Samoa",
+    "symbol": "🇼🇸",
+    "currency": "WST",
+    "inflation_rate": 5.2,
+    "source": "CBS (2024)"
+  },
+  {
+    "name": "San Marino",
+    "symbol": "🇸🇲",
+    "currency": "EUR",
+    "inflation_rate": 3.0,
+    "source": "IMF (2024)"
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "symbol": "🇸🇹",
+    "currency": "STN",
+    "inflation_rate": 12.8,
+    "source": "BCSTP (2024)"
+  },
+  {
+    "name": "Saudi Arabia",
+    "symbol": "🇸🇦",
+    "currency": "SAR",
+    "inflation_rate": 2.3,
+    "source": "SAMA (2024)"
+  },
+  {
+    "name": "Senegal",
+    "symbol": "🇸🇳",
+    "currency": "XOF",
+    "inflation_rate": 7.5,
+    "source": "BCEAO (2024)"
+  },
+  {
+    "name": "Serbia",
+    "symbol": "🇷🇸",
+    "currency": "RSD",
+    "inflation_rate": 8.0,
+    "source": "NBS (2024)"
+  },
+  {
+    "name": "Seychelles",
+    "symbol": "🇸🇨",
+    "currency": "SCR",
+    "inflation_rate": 4.8,
+    "source": "CBS (2024)"
+  },
+  {
+    "name": "Sierra Leone",
+    "symbol": "🇸🇱",
+    "currency": "SLL",
+    "inflation_rate": 27.2,
+    "source": "BoS (2024)"
+  },
+  {
+    "name": "Singapore",
+    "symbol": "🇸🇬",
+    "currency": "SGD",
+    "inflation_rate": 3.1,
+    "source": "MAS (2024)"
+  },
+  {
+    "name": "Slovakia",
+    "symbol": "🇸🇰",
+    "currency": "EUR",
+    "inflation_rate": 4.6,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Slovenia",
+    "symbol": "🇸🇮",
+    "currency": "EUR",
+    "inflation_rate": 3.7,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Solomon Islands",
+    "symbol": "🇸🇧",
+    "currency": "SBD",
+    "inflation_rate": 5.4,
+    "source": "CBSI (2024)"
+  },
+  {
+    "name": "Somalia",
+    "symbol": "🇸🇴",
+    "currency": "SOS",
+    "inflation_rate": 12.0,
+    "source": "CBS (2024)"
+  },
+  {
+    "name": "South Africa",
+    "symbol": "🇿🇦",
+    "currency": "ZAR",
+    "inflation_rate": 6.2,
+    "source": "SARB (2024)"
+  },
+  {
+    "name": "South Sudan",
+    "symbol": "🇸🇸",
+    "currency": "SSP",
+    "inflation_rate": 45.0,
+    "source": "BoSS (2024)"
+  },
+  {
+    "name": "Spain",
+    "symbol": "🇪🇸",
+    "currency": "EUR",
+    "inflation_rate": 3.8,
+    "source": "Eurostat (2024)"
+  },
+  {
+    "name": "Sri Lanka",
+    "symbol": "🇱🇰",
+    "currency": "LKR",
+    "inflation_rate": 15.3,
+    "source": "CBSL (2024)"
+  },
+  {
+    "name": "Sudan",
+    "symbol": "🇸🇩",
+    "currency": "SDG",
+    "inflation_rate": 340.0,
+    "source": "CBoS (2024)"
+  },
+  {
+    "name": "Suriname",
+    "symbol": "🇸🇷",
+    "currency": "SRD",
+    "inflation_rate": 63.5,
+    "source": "CBvS (2024)"
+  },
+  {
+    "name": "Sweden",
+    "symbol": "🇸🇪",
+    "currency": "SEK",
+    "inflation_rate": 4.4,
+    "source": "SCB (2024)"
+  },
+  {
+    "name": "Switzerland",
+    "symbol": "🇨🇭",
+    "currency": "CHF",
+    "inflation_rate": 1.5,
+    "source": "FSO (2024)"
+  },
+  {
+    "name": "Syria",
+    "symbol": "🇸🇾",
+    "currency": "SYP",
+    "inflation_rate": 139.0,
+    "source": "CBS (2024)"
+  },
+  {
+    "name": "Taiwan",
+    "symbol": "🇹🇼",
+    "currency": "TWD",
+    "inflation_rate": 2.9,
+    "source": "DGBAS (2024)"
+  },
+  {
+    "name": "Tajikistan",
+    "symbol": "🇹🇯",
+    "currency": "TJS",
+    "inflation_rate": 8.3,
+    "source": "NBT (2024)"
+  },
+  {
+    "name": "Tanzania",
+    "symbol": "🇹🇿",
+    "currency": "TZS",
+    "inflation_rate": 6.8,
+    "source": "BoT (2024)"
+  },
+  {
+    "name": "Thailand",
+    "symbol": "🇹🇭",
+    "currency": "THB",
+    "inflation_rate": 3.3,
+    "source": "BoT (2024)"
+  },
+  {
+    "name": "Togo",
+    "symbol": "🇹🇬",
+    "currency": "XOF",
+    "inflation_rate": 7.6,
+    "source": "BCEAO (2024)"
+  },
+  {
+    "name": "Tonga",
+    "symbol": "🇹🇴",
+    "currency": "TOP",
+    "inflation_rate": 6.5,
+    "source": "NRBT (2024)"
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "symbol": "🇹🇹",
+    "currency": "TTD",
+    "inflation_rate": 5.8,
+    "source": "CBTT (2024)"
+  },
+  {
+    "name": "Tunisia",
+    "symbol": "🇹🇳",
+    "currency": "TND",
+    "inflation_rate": 8.3,
+    "source": "INS (2024)"
+  },
+  {
+    "name": "Turkey",
+    "symbol": "🇹🇷",
+    "currency": "TRY",
+    "inflation_rate": 65.0,
+    "source": "TUIK (2024)"
+  },
+  {
+    "name": "Turkmenistan",
+    "symbol": "🇹🇲",
+    "currency": "TMT",
+    "inflation_rate": "N/A",
+    "source": "No reliable data"
+  },
+  {
+    "name": "Tuvalu",
+    "symbol": "🇹🇻",
+    "currency": "AUD",
+    "inflation_rate": 3.0,
+    "source": "IMF (2024)"
+  },
+  {
+    "name": "Uganda",
+    "symbol": "🇺🇬",
+    "currency": "UGX",
+    "inflation_rate": 7.2,
+    "source": "BoU (2024)"
+  },
+  {
+    "name": "Ukraine",
+    "symbol": "🇺🇦",
+    "currency": "UAH",
+    "inflation_rate": 18.7,
+    "source": "NBU (2024)"
+  },
+  {
+    "name": "United Arab Emirates",
+    "symbol": "🇦🇪",
+    "currency": "AED",
+    "inflation_rate": 2.9,
+    "source": "CBUAE (2024)"
+  },
+  {
+    "name": "United Kingdom",
+    "symbol": "🇬🇧",
+    "currency": "GBP",
+    "inflation_rate": 4.0,
+    "source": "ONS (2024)"
+  },
+  {
+    "name": "United States",
+    "symbol": "🇺🇸",
+    "currency": "USD",
+    "inflation_rate": 3.5,
+    "source": "BLS (2024)"
+  },
+  {
+    "name": "Uruguay",
+    "symbol": "🇺🇾",
+    "currency": "UYU",
+    "inflation_rate": 7.8,
+    "source": "BCU (2024)"
+  },
+  {
+    "name": "Uzbekistan",
+    "symbol": "🇺🇿",
+    "currency": "UZS",
+    "inflation_rate": 11.5,
+    "source": "CBU (2024)"
+  },
+  {
+    "name": "Vanuatu",
+    "symbol": "🇻🇺",
+    "currency": "VUV",
+    "inflation_rate": 5.2,
+    "source": "RBV (2024)"
+  },
+  {
+    "name": "Vatican City",
+    "symbol": "🇻🇦",
+    "currency": "EUR",
+    "inflation_rate": 2.8,
+    "source": "IMF (2024)"
+  },
+  {
+    "name": "Venezuela",
+    "symbol": "🇻🇪",
+    "currency": "VES",
+    "inflation_rate": 400.0,
+    "source": "BCV (2024)"
+  },
+  {
+    "name": "Vietnam",
+    "symbol": "🇻🇳",
+    "currency": "VND",
+    "inflation_rate": 4.4,
+    "source": "GSO (2024)"
+  },
+  {
+    "name": "Yemen",
+    "symbol": "🇾🇪",
+    "currency": "YER",
+    "inflation_rate": 45.0,
+    "source": "CBY (2024)"
+  },
+  {
+    "name": "Zambia",
+    "symbol": "🇿🇲",
+    "currency": "ZMW",
+    "inflation_rate": 13.5,
+    "source": "BoZ (2024)"
+  },
+  {
+    "name": "Zimbabwe",
+    "symbol": "🇿🇼",
+    "currency": "ZWL",
+    "inflation_rate": 150.0,
+    "source": "ZimStat (2024)"
+  }
+]

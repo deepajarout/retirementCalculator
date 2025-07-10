@@ -1,6 +1,7 @@
 const express = require('express');
 const { create } = require('express-handlebars');
 const path = require('path');
+const country_data = require('./store/country25.json');
 
 const app = express();
 
@@ -15,32 +16,34 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 function calculateInvestment(params) {
-  try {
     const results = [];
+    const MAX_AGE = 123; // Maximum age for calculations
 
     const {
-      initialAmount,
-      monthlyContribution: initialMonthlyContribution,
-      interestRate,
-      inflationRate,
-      currentAge,
-      retirementAge,
-      monthlyWithdrawal,
-      percentageIncreaseMonthlyContribution
+        currency,
+        initialAmount,
+        monthlyContribution: initialMonthlyContribution,
+        interestRate,
+        inflationRate,
+        currentAge,
+        retirementAge,
+        monthlyWithdrawal,
+        percentageIncreaseMonthlyContribution
     } = params;
 
+    // Validate inputs
     if (
-      typeof currentAge !== "number" ||
-      typeof retirementAge !== "number" ||
-      currentAge <= 0 || retirementAge <= 0 ||
-      currentAge > 110 || retirementAge > 110 ||
-      isNaN(currentAge) || isNaN(retirementAge)
+        typeof currentAge !== "number" ||
+        typeof retirementAge !== "number" ||
+        currentAge <= 0 || retirementAge <= 0 ||
+        currentAge > MAX_AGE || retirementAge > MAX_AGE ||
+        isNaN(currentAge) || isNaN(retirementAge)
     ) {
-      throw new Error("Invalid age provided. Age should be between 1 and 110.");
+        throw new Error(`Invalid age provided. Age should be between 1 and ${MAX_AGE}.`);
     }
 
     if (retirementAge <= currentAge) {
-      throw new Error("Retirement age must be greater than current age.");
+        throw new Error("Retirement age must be greater than current age.");
     }
 
     let currentAmount = initialAmount;
@@ -48,65 +51,172 @@ function calculateInvestment(params) {
     let age = currentAge;
     let monthlyContribution = initialMonthlyContribution;
 
-    // Phase 1: Pre-retirement
-    while (age < retirementAge) {
-      const yearlyContribution = monthlyContribution * 12;
-      currentAmount += currentAmount * (interestRate / 100);
-      currentAmount += yearlyContribution;
-      totalInvested += yearlyContribution;
-      currentAmount += monthlyContribution * 6 * (interestRate / 100);
-      currentAmount -= currentAmount * (inflationRate / 100);
-      monthlyContribution += monthlyContribution * (percentageIncreaseMonthlyContribution / 100);
+    // Phase 1: Pre-retirement (Accumulation)
+    while (age < retirementAge && age < MAX_AGE) {
+        const yearlyContribution = monthlyContribution * 12;
+        
+        // Apply annual growth
+        currentAmount *= (1 + interestRate / 100);
+        currentAmount += yearlyContribution;
+        
+        // Approximate mid-year growth on contributions
+        currentAmount += monthlyContribution * 6 * (interestRate / 100);
+        
+        // Adjust for inflation
+        currentAmount *= (1 - inflationRate / 100);
+        
+        totalInvested += yearlyContribution;
+        monthlyContribution *= (1 + percentageIncreaseMonthlyContribution / 100);
 
-      results.push({
-        age: ++age,
-        totalInvested: totalInvested.toFixed(2),
-        totalSavings: currentAmount.toFixed(2),
-        withdrawal: 0,
-      });
+        results.push({
+            age: ++age,
+            totalInvested: totalInvested.toFixed(2),
+            totalSavings: currentAmount.toFixed(2),
+            withdrawal: "0.00", // Consistent format for accumulation phase
+            currency: currency
+        });
 
-      if (!isFinite(currentAmount)) {
-        throw new Error("Calculation error: result is too large or invalid.");
-      }
+        if (!isFinite(currentAmount)) {
+            throw new Error("Calculation error: result is too large or invalid.");
+        }
     }
 
-    // Phase 2: Post-retirement
-    while (currentAmount > 0 && age <= 110) {
-      const yearlyWithdrawal = monthlyWithdrawal * 12;
-      currentAmount -= yearlyWithdrawal;
-      currentAmount += currentAmount * (interestRate / 100);
-      currentAmount += monthlyWithdrawal * 6 * (interestRate / 100);
-      currentAmount -= currentAmount * (inflationRate / 100);
-      currentAmount = Math.max(currentAmount, 0);
+    // Phase 2: Post-retirement (Withdrawal)
+    while (currentAmount > 0 && age < MAX_AGE) {
+        const yearlyWithdrawal = monthlyWithdrawal * 12;
+        
+        // Withdraw first
+        currentAmount = Math.max(currentAmount - yearlyWithdrawal, 0);
+        
+        // Apply growth
+        currentAmount *= (1 + interestRate / 100);
+        
+        // Approximate mid-year growth on withdrawals
+        currentAmount += monthlyWithdrawal * 6 * (interestRate / 100);
+        
+        // Adjust for inflation
+        currentAmount *= (1 - inflationRate / 100);
 
-      results.push({
-        age: ++age,
-        totalInvested: totalInvested.toFixed(2),
-        totalSavings: currentAmount.toFixed(2),
-        withdrawal: yearlyWithdrawal.toFixed(2),
-      });
+        results.push({
+            age: ++age,
+            totalInvested: totalInvested.toFixed(2),
+            totalSavings: currentAmount.toFixed(2),
+            withdrawal: yearlyWithdrawal.toFixed(2),
+            currency: currency
+        });
 
-      if (!isFinite(currentAmount)) {
-        throw new Error("Calculation error: result is too large or invalid.");
-      }
+        if (!isFinite(currentAmount)) {
+            throw new Error("Calculation error: result is too large or invalid.");
+        }
+    }
 
-      if (results.length > 100) break; // safety cap for mobile
+    // Final record if we reached max age with remaining funds
+    if (age === MAX_AGE && currentAmount > 0) {
+        results.push({
+            age: MAX_AGE,
+            totalInvested: totalInvested.toFixed(2),
+            totalSavings: currentAmount.toFixed(2),
+            withdrawal: "0.00", // No withdrawal in final year
+            currency: currency
+        });
     }
 
     return results;
-  } catch (error) {
-    alert(`❌ Calculation Error: ${error.message}`);
-    return [];
-  }
 }
+// function calculateInvestment(params) {
+//     const results = [];
+
+//     const {
+//       currency,
+//       initialAmount,
+//       monthlyContribution: initialMonthlyContribution,
+//       interestRate,
+//       inflationRate,
+//       currentAge,
+//       retirementAge,
+//       monthlyWithdrawal,
+//       percentageIncreaseMonthlyContribution
+//     } = params;
+
+//     if (
+//       typeof currentAge !== "number" ||
+//       typeof retirementAge !== "number" ||
+//       currentAge <= 0 || retirementAge <= 0 ||
+//       currentAge > 110 || retirementAge > 110 ||
+//       isNaN(currentAge) || isNaN(retirementAge)
+//     ) {
+//       throw new Error("Invalid age provided. Age should be between 1 and 110.");
+//     }
+
+//     if (retirementAge <= currentAge) {
+//       throw new Error("Retirement age must be greater than current age.");
+//     }
+
+//     let currentAmount = initialAmount;
+//     let totalInvested = initialAmount;
+//     let age = currentAge;
+//     let monthlyContribution = initialMonthlyContribution;
+
+//     // Phase 1: Pre-retirement
+//     while (age < retirementAge) {
+//       const yearlyContribution = monthlyContribution * 12;
+//       currentAmount += currentAmount * (interestRate / 100);
+//       currentAmount += yearlyContribution;
+//       totalInvested += yearlyContribution;
+//       currentAmount += monthlyContribution * 6 * (interestRate / 100);
+//       currentAmount -= currentAmount * (inflationRate / 100);
+//       monthlyContribution += monthlyContribution * (percentageIncreaseMonthlyContribution / 100);
+
+//       results.push({
+//         age: ++age,
+//         totalInvested: totalInvested.toFixed(2),
+//         totalSavings: currentAmount.toFixed(2),
+//         withdrawal: 0,
+//         currency:currency
+//       });
+
+//       if (!isFinite(currentAmount)) {
+//         throw new Error("Calculation error: result is too large or invalid.");
+//       }
+//     }
+
+//     // Phase 2: Post-retirement
+//     while (currentAmount > 0 && age <= 110) {
+//       const yearlyWithdrawal = monthlyWithdrawal * 12;
+//       currentAmount -= yearlyWithdrawal;
+//       currentAmount += currentAmount * (interestRate / 100);
+//       currentAmount += monthlyWithdrawal * 6 * (interestRate / 100);
+//       currentAmount -= currentAmount * (inflationRate / 100);
+//       currentAmount = Math.max(currentAmount, 0);
+
+//       results.push({
+//         age: ++age,
+//         totalInvested: totalInvested.toFixed(2),
+//         totalSavings: currentAmount.toFixed(2),
+//         withdrawal: yearlyWithdrawal.toFixed(2),
+//         currency:currency
+//       });
+
+//       if (!isFinite(currentAmount)) {
+//         throw new Error("Calculation error: result is too large or invalid.");
+//       }
+
+//       if (results.length > 100) break; // safety cap for mobile
+//     }
+//     return results;
+// }
 
 // Routes
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Investment Calculator' });
+
+    res.render('index', { title: 'Investment Calculator' ,
+      country : country_data
+    });
 });
 
 app.post('/', (req, res) => {
     const {
+      currency,
         initialAmount,
         monthlyContribution,
         interestRate,
@@ -117,7 +227,9 @@ app.post('/', (req, res) => {
         percentageIncreaseMonthlyContribution
     } = req.body;
 
-    const results = calculateInvestment({
+try {
+   const results = calculateInvestment({
+        currency:currency,
         initialAmount: parseFloat(initialAmount),
         monthlyContribution: parseFloat(monthlyContribution),
         interestRate: parseFloat(interestRate),
@@ -128,9 +240,10 @@ app.post('/', (req, res) => {
         percentageIncreaseMonthlyContribution: parseFloat(percentageIncreaseMonthlyContribution)
     });
 
-    const labels = results.map((r) => r.age);
-    const totalSavings = results.map((r) => r.totalSavings);
-    const withdrawals = results.map((r) => r.withdrawal);
+    const labels = results?.map((r) => r.age);
+    const totalSavings = results?.map((r) => r.totalSavings);
+    const withdrawals = results?.map((r) => r.withdrawal);
+
 
     res.render('index', {
         title: 'Investment Calculator',
@@ -138,7 +251,33 @@ app.post('/', (req, res) => {
         labels: JSON.stringify(labels),
         totalSavings: JSON.stringify(totalSavings),
         withdrawals: JSON.stringify(withdrawals),
+        country : country_data,
+        initialAmount: parseFloat(initialAmount),
+        monthlyContribution: parseFloat(monthlyContribution),
+        interestRate: parseFloat(interestRate),
+        inflationRate: parseFloat(inflationRate),
+        currentAge: parseInt(currentAge, 10),
+        retirementAge: parseInt(retirementAge, 10),
+        monthlyWithdrawal: parseFloat(monthlyWithdrawal),
+        percentageIncreaseMonthlyContribution: parseFloat(percentageIncreaseMonthlyContribution)
     });
+}catch(error){
+    res.render('index', { title: 'Investment Calculator' ,
+      country : country_data,
+      errorMessage: `❌ Error: ${error.message}`,
+      results:[],
+        country : country_data,
+        initialAmount: parseFloat(initialAmount),
+        monthlyContribution: parseFloat(monthlyContribution),
+        interestRate: parseFloat(interestRate),
+        inflationRate: parseFloat(inflationRate),
+        currentAge: parseInt(currentAge, 10),
+        retirementAge: parseInt(retirementAge, 10),
+        monthlyWithdrawal: parseFloat(monthlyWithdrawal),
+        percentageIncreaseMonthlyContribution: parseFloat(percentageIncreaseMonthlyContribution)
+    });
+}
+
 });
 
 // Start the server
