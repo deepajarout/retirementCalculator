@@ -72,7 +72,7 @@ function calculateInvestment(params) {
             age: ++age,
             totalInvested: totalInvested.toFixed(2),
             totalSavings: currentAmount.toFixed(2),
-            withdrawal: "0.00", // Consistent format for accumulation phase
+            withdrawal: "0.00",
             currency: currency
         });
 
@@ -84,45 +84,145 @@ function calculateInvestment(params) {
     // Phase 2: Post-retirement (Withdrawal)
     while (currentAmount > 0 && age < MAX_AGE) {
         const yearlyWithdrawal = monthlyWithdrawal * 12;
+        const actualWithdrawal = Math.min(yearlyWithdrawal, currentAmount);
         
         // Withdraw first
-        currentAmount = Math.max(currentAmount - yearlyWithdrawal, 0);
+        currentAmount -= actualWithdrawal;
         
-        // Apply growth
-        currentAmount *= (1 + interestRate / 100);
-        
-        // Approximate mid-year growth on withdrawals
-        currentAmount += monthlyWithdrawal * 6 * (interestRate / 100);
-        
-        // Adjust for inflation
-        currentAmount *= (1 - inflationRate / 100);
+        // Apply growth to remaining balance
+        if (currentAmount > 0) {
+            currentAmount *= (1 + interestRate / 100);
+            currentAmount += (actualWithdrawal / 12) * 6 * (interestRate / 100);
+            currentAmount *= (1 - inflationRate / 100);
+        }
 
         results.push({
             age: ++age,
             totalInvested: totalInvested.toFixed(2),
-            totalSavings: currentAmount.toFixed(2),
-            withdrawal: yearlyWithdrawal.toFixed(2),
+            totalSavings: Math.max(currentAmount, 0).toFixed(2),
+            withdrawal: actualWithdrawal.toFixed(2),
             currency: currency
         });
 
         if (!isFinite(currentAmount)) {
             throw new Error("Calculation error: result is too large or invalid.");
         }
-    }
 
-    // Final record if we reached max age with remaining funds
-    if (age === MAX_AGE && currentAmount > 0) {
-        results.push({
-            age: MAX_AGE,
-            totalInvested: totalInvested.toFixed(2),
-            totalSavings: currentAmount.toFixed(2),
-            withdrawal: "0.00", // No withdrawal in final year
-            currency: currency
-        });
+        // Stop if money runs out completely
+        if (currentAmount <= 0) break;
     }
 
     return results;
 }
+
+// function calculateInvestment(params) {
+//     const results = [];
+//     const MAX_AGE = 123; // Maximum age for calculations
+
+//     const {
+//         currency,
+//         initialAmount,
+//         monthlyContribution: initialMonthlyContribution,
+//         interestRate,
+//         inflationRate,
+//         currentAge,
+//         retirementAge,
+//         monthlyWithdrawal,
+//         percentageIncreaseMonthlyContribution
+//     } = params;
+
+//     // Validate inputs
+//     if (
+//         typeof currentAge !== "number" ||
+//         typeof retirementAge !== "number" ||
+//         currentAge <= 0 || retirementAge <= 0 ||
+//         currentAge > MAX_AGE || retirementAge > MAX_AGE ||
+//         isNaN(currentAge) || isNaN(retirementAge)
+//     ) {
+//         throw new Error(`Invalid age provided. Age should be between 1 and ${MAX_AGE}.`);
+//     }
+
+//     if (retirementAge <= currentAge) {
+//         throw new Error("Retirement age must be greater than current age.");
+//     }
+
+//     let currentAmount = initialAmount;
+//     let totalInvested = initialAmount;
+//     let age = currentAge;
+//     let monthlyContribution = initialMonthlyContribution;
+
+//     // Phase 1: Pre-retirement (Accumulation)
+//     while (age < retirementAge && age < MAX_AGE) {
+//         const yearlyContribution = monthlyContribution * 12;
+        
+//         // Apply annual growth
+//         currentAmount *= (1 + interestRate / 100);
+//         currentAmount += yearlyContribution;
+        
+//         // Approximate mid-year growth on contributions
+//         currentAmount += monthlyContribution * 6 * (interestRate / 100);
+        
+//         // Adjust for inflation
+//         currentAmount *= (1 - inflationRate / 100);
+        
+//         totalInvested += yearlyContribution;
+//         monthlyContribution *= (1 + percentageIncreaseMonthlyContribution / 100);
+
+//         results.push({
+//             age: ++age,
+//             totalInvested: totalInvested.toFixed(2),
+//             totalSavings: currentAmount.toFixed(2),
+//             withdrawal: "0.00", // Consistent format for accumulation phase
+//             currency: currency
+//         });
+
+//         if (!isFinite(currentAmount)) {
+//             throw new Error("Calculation error: result is too large or invalid.");
+//         }
+//     }
+
+//     // Phase 2: Post-retirement (Withdrawal)
+//     while (currentAmount > 0 && age < MAX_AGE) {
+//         const yearlyWithdrawal = monthlyWithdrawal * 12;
+        
+//         // Withdraw first
+//         currentAmount = Math.max(currentAmount - yearlyWithdrawal, 0);
+        
+//         // Apply growth
+//         currentAmount *= (1 + interestRate / 100);
+        
+//         // Approximate mid-year growth on withdrawals
+//         currentAmount += monthlyWithdrawal * 6 * (interestRate / 100);
+        
+//         // Adjust for inflation
+//         currentAmount *= (1 - inflationRate / 100);
+
+//         results.push({
+//             age: ++age,
+//             totalInvested: totalInvested.toFixed(2),
+//             totalSavings: currentAmount.toFixed(2),
+//             withdrawal: yearlyWithdrawal.toFixed(2),
+//             currency: currency
+//         });
+
+//         if (!isFinite(currentAmount)) {
+//             throw new Error("Calculation error: result is too large or invalid.");
+//         }
+//     }
+
+//     // Final record if we reached max age with remaining funds
+//     if (age === MAX_AGE && currentAmount > 0) {
+//         results.push({
+//             age: MAX_AGE,
+//             totalInvested: totalInvested.toFixed(2),
+//             totalSavings: currentAmount.toFixed(2),
+//             withdrawal: "0.00", // No withdrawal in final year
+//             currency: currency
+//         });
+//     }
+
+//     return results;
+// }
 // function calculateInvestment(params) {
 //     const results = [];
 
