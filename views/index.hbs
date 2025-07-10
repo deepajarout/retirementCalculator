@@ -35,9 +35,6 @@
      <div class="form-container">
             <h2 class="text-xl font-bold text-blue-600">Enter Your Details</h2>
             <form class="mt-4" action="/" method="POST">
-            {{#if errorMessage}} 
-                <div id="requiredSavingsResult" class="result mt-4 font-bold text-red-700">{{errorMessage}}</div>
-                {{/if}}
                 {{#if errorMessage}}
   <div class="error-message" style="color: red; font-weight: bold;">
     {{errorMessage}}
@@ -114,8 +111,15 @@
 <!-- TAB 2: Required Savings for 30-Year Retirement -->
 <div class="container calculator-tab" id="calc2" style="display: none;">
   <div class="form-container">
-    <h2 class="text-xl font-bold text-blue-600">How Much Should You Save to Survive 30 Years?</h2>
+    <h2 class="text-xl font-bold text-blue-600">How Much Should You Save to Survive X(eg.30) Years?</h2>
     <form onsubmit="calculateRequiredSavings(event)">
+
+        <label for="country">Select Your Country (Auto-fills inflation rate): </label>
+                <select id="country1" name="country"  class="w-full border border-gray-300 rounded px-3 py-3 mb-2 mt-2"  size="2">
+                  {{#each country}}
+                <option value={{this.name}} data-currency={{this.currency}} data-inflation={{this.25_year_inflation_avg}} onclick="updateCountryDetail()">{{this.symbol}} {{this.name}}</option>
+                  {{/each}}
+                </select>
       <label for="desiredMonthlyWithdrawal">Desired Monthly Withdrawal:</label>
       <input type="number" id="desiredMonthlyWithdrawal" required step="0.01">
 
@@ -144,7 +148,20 @@
     const currency = selectedOption.getAttribute("data-currency");
   // Fill the inputs if data exists
   document.getElementById("inflationRate").value = inflation || '';
+   document.getElementById("expectedInflationRate").value = inflation || '';
    document.getElementById("currency").value = currency || '';
+   
+
+}
+ function updateCountryDetail() {
+  const select = document.getElementById("country1");
+  const selectedOption = select.options[select.selectedIndex];
+  const inflation = selectedOption.getAttribute("data-inflation");
+    const currency = selectedOption.getAttribute("data-currency");
+  // Fill the inputs if data exists
+   document.getElementById("expectedInflationRate").value = inflation || '';
+   document.getElementById("currency").value = currency || '';
+   
 
 }
   function showTab(tabId) {
@@ -166,7 +183,7 @@ function calculateRequiredSavings(e) {
     const interestInput = document.getElementById('expectedInterestRate');
     const inflationInput = document.getElementById('expectedInflationRate');
     const resultBox = document.getElementById('requiredSavingsResult');
-
+    const currency =   document.getElementById("currency").value
     // Convert inputs to numbers
     const monthlyWithdrawal = parseFloat(withdrawalInput.value);
     const years = parseInt(yearsInput.value);
@@ -201,7 +218,7 @@ function calculateRequiredSavings(e) {
       ((1 - Math.pow(1 + monthlyRealRate, -months)) / monthlyRealRate);
 
     // Display result
-    resultBox.innerText = `✅ You will need approximately ₹${requiredSavings.toFixed(2)} at retirement.`;
+    resultBox.innerText = `✅ You will need approximately ${currency} ${requiredSavings.toFixed(2)} at retirement.`;
     resultBox.style.color = "green";
   }
 
