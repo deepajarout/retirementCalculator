@@ -77,7 +77,7 @@
         </div>
     {{#if results}}
 
-        <div class="results-container">
+        <div class="results-container" id="results-section" data-has-results="true">
             <h2 class="text-xl font-bold text-blue-600">Results</h2>
             <canvas id="retirementChart"></canvas>
                 <div class="table-wrapper">
@@ -149,6 +149,19 @@
 
 <!-- JS -->
 <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const resultsSection = document.getElementById('results-section');
+  const hasResults = resultsSection.getAttribute('data-has-results') === 'true';
+  
+  if (hasResults) {
+    setTimeout(() => {
+      resultsSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 300); // Small delay to ensure all elements are loaded
+  }
+});
   document.addEventListener('DOMContentLoaded', function() {
   const countrySelect = document.getElementById('country');
   
