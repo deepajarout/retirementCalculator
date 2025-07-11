@@ -110,6 +110,19 @@ function calculateInvestment(params) {
 
         // Stop if money runs out completely
         if (currentAmount <= 0) break;
+
+        if (age >= MAX_AGE) {
+  results.push({
+    age: MAX_AGE,
+    totalInvested: "",
+    totalSavings: "",
+    withdrawal: "",
+    currency: "",
+    note: `⚠️ Calculation stopped at age ${MAX_AGE}.
+This limit is based on global life expectancy trends and financial planning best practices.
+For this calculator, we consider 123 as the upper bound, inspired by the oldest verified human lifespan (Jeanne Calment, 122 years).`
+  });
+}
     }
 
     return results;
