@@ -43,7 +43,7 @@
                 <label for="country">Select Your Country (Auto-fills inflation rate): </label>
                 <select id="country" name="country"  class="w-full border border-gray-300 rounded px-3 py-3 mb-2 mt-2"  size="2">
                   {{#each country}}
-                <option value={{this.name}} data-currency={{this.currency}} data-inflation={{this.25_year_inflation_avg}} onclick="updateCountryDetails()">{{this.symbol}} {{this.name}}</option>
+                <option value={{this.name}} data-currency={{this.currency}} data-inflation={{this.25_year_inflation_avg}} onchange="updateCountryDetails()">{{this.symbol}} {{this.name}}</option>
                   {{/each}}
                 </select>
                  
@@ -117,7 +117,7 @@
         <label for="country">Select Your Country (Auto-fills inflation rate): </label>
                 <select id="country1" name="country"  class="w-full border border-gray-300 rounded px-3 py-3 mb-2 mt-2"  size="2">
                   {{#each country}}
-                <option value={{this.name}} data-currency={{this.currency}} data-inflation={{this.25_year_inflation_avg}} onclick="updateCountryDetail()">{{this.symbol}} {{this.name}}</option>
+                <option value={{this.name}} data-currency={{this.currency}} data-inflation={{this.25_year_inflation_avg}} onchange="updateCountryDetail()">{{this.symbol}} {{this.name}}</option>
                   {{/each}}
                 </select>
       <label for="desiredMonthlyWithdrawal">Desired Monthly Withdrawal:</label>
